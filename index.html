@@ -1,7 +1,134 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+---
+title: ComplexCity Lab Home
+Author: Fabien Pfaender
+Keywords: UTC, UTT, UTBM, SHU, ComplexCity, Laboratory, Comprehensive, Data Science, City, UTSEUS
+Description:
+---
+{% include header.html %}
+	<header class="header clearfix container">
+      <!-- the LOGO -->
+      <div class="logo">
+      	<a href="{{ site.url }}" alt="Complexcity Lab home" title="go home">
+      		<img src="images/logo-ComplexCity.svg" onerror="this.onerror=null; this.src='images/logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
+	    </a>
+	  </div>
+      
+      <!--the MENU -->
+      <nav class="menu_main">
+        <ul>
+          <li><a href="#">PROJECTS</a></li>
+          <li><a href="#">STUDIES</a></li>
+          <li><a href="/blog/">BLOG</a></li>
+          <li><a href="/about/">ABOUT US</a></li>
+        </ul>
+      </nav>
+      
+      <!-- credit work in the top corner, image in css -->
+    </header>
+
+	<a name="workshop"></a>
+	<div class="grey" style="border-bottom:1px solid #ccc;">
+		<!-- the PUNCHLINE -->
+		<article class="hero clearfix center punchline">
+			<div class="col_100 right small center" style="top:-1em;position:relative;font-family: Lato, 'Helvetica Neue', sans-serif;color:rgb(70,70,70);text-shadow: rgb(255, 255, 255) 0px 1px 0px;">
+				<!-- Picture Attribution for Licenced work-->
+				<a style="text-decoration: none;" href="http://creativecommons.org/licenses/by-sa/2.0/">cc by-nc-sa</a>
+				<a href="http://www.flickr.com/photos/stuckincustoms/8242941446/" style="text-decoration: none;">, photo by stuckincustoms</a>
+			</div>
+		</article>
+		
+		<!-- the TITLE -->
+		<article class="article punchline grey">
+			<div class="col_100 center ">
+				<!--<h1>ComplexCity</h1>-->
+				<h2>A COMPREHENSIVE SINO FRENCH LAB TO ADDRESS CRUCIAL CITY ISSUES</h2>
+			</div>
+		</article>
+
+		<!-- the NEWS -->
+		<article class="article clearfix">
+			<div class="container">
+				<a name="theLab" ></a>
+				<!-- the EXPLANATION -->
+				<div class="col_33">
+					<h2 class="center thin">Understand the City</h2>
+					<p>ComplexCity Lab is an interdisciplinary sino-french joint research laboratory. It's aims is to study the city, and to a greater extent, urban systems. We are taking an innovative approach which combines the analytical and computational capabilities of engineering sciences with the openness and creativeness of humanities and social sciences. </p>
+					<p>We consider the city as a complex system composed of a very large number of heterogeneous, dynamic, constantly mutative entities in non-linear interaction with each other at various scales. Exploring and analyzing this system leads us to technological, organizational and social innovations to enhance today's cities and help design the cities of tomorrow.</p>
+				</div>
+
+				<div class="col_33 center">
+					<h2 class="center thin">Lab News</h2>
+					<ul class="thin breakingNews left">
+						<li><strong>13 - 16 jan 2014</strong> — 2nd ComplexCity research partnership seminar with 2nd call team leader will be held in Shanghai in January. </li>
+						<li><strong>13 jan 2014</strong> — Sustainability will be the subject of the next ComplexCity Conference to be held in Shanghai in January. Program to come soon</li>
+						<li><strong>18 nov 2013</strong> — 2nd Call for Project Review in France, Institute of Complex Systems Paris Île de France [more information soon]</li>
+						<li class="importantNews"><strong>13 jul 2013</strong> — ComplexCity Lab is officially created between France UT group and Shanghai University</li>
+					</ul>
+				</div>
+
+				<!-- the TWEETS -->
+				<div class="col_33">
+					<h2 class="center thin"><span class="twitter">@complexcity</span><a class="twitter" href="http://twitter.com/complexcity_lab" ><img src="images/twitter.png" class="twitter" /></a><a class="twitter" href="http://www.weibo.com/complexcity"><img src="images/weibo.png" class="twitter" /></a>
+					</h2>
+					<ul class="thin breakingNews left twitter" id="twitter">
+						<script lang="javascript">
+							(function() {
+								$.getJSON("json/data.json")
+								.done(function(data) {
+									var tweetDisplay = 4;
+									var autolinker = new Autolinker( { newWindow: true} );
+									$.each(data, function(i, item) {
+										var linkedText = autolinker.link(item.text);
+;										$( "<li>", {html : linkedText}).appendTo( "#twitter" );
+										if ( i === tweetDisplay ) {
+											return false;
+										}
+									});
+								});
+							})();
+						</script>
+					</ul>
+				</div>
+			</div>
+		</article>
+	</div>
+	
+	<!-- the MAIN CONTENT -->
+	<article class="article clearfix" style="padding-top:0em;">
+		<h1 class="thin center">City Science</h1>
+		<div class="container">
+			<p>ComplexCity hosts 16 interdisciplinary research projects on cities which have at least one French and one Chinese researcher. In addition to these projects we are developing a conceptual framework based on <span class="importantNews">data science</span> aimed at creating a science of cities.</p>
+			<div class="col_50">
+				<ol>
+					<li>We develop strategies and a platform for <span class="importantNews">large scale dynamic heterogenous urban data capture</span> (including traditional non digital data) and data high performance / high availability storage. We design simple end-point so that scientist from various disciplines can use them as simply as possible. This makes quantitative and qualitative data available to all our researchers and partners</li>
+					<li>We <span class="importantNews">explore massive urban data</span> using a wide range of data science techniques: machine learning (supervised and unsupervised classification), probabilist methods, design methodologies, 3D modeling,  geographic and information visualization, language processing, serious gaming. We create methods and tools to be used by all lab partners.</li>
+					<li>We use the result of the two previous step to <span class="importantNews">study complex interdisciplinary issues in the city</span>: citizen health awareness, building of a smart green creative sustainable and lovable city, improving car traffic/walking conditions, modelization of places behaviors and characteristics, smart cctv use for security, livability and mobility.</li>
+					<li>We <span class="importantNews">design online city services and serious games</span> for citizens, companies and government based on our multi-layered data for them to explore, know better, and improve policies of their city. It also help in return crowd source urban data.</li>
+				</ol>
+			</div>
+			<div class="col_50">
+				<ul class="rslides">
+					<li><img src="images/slideshow/laptop-slideshow1.png" alt=""></li>
+					<li><img src="images/slideshow/laptop-slideshow2.png" alt=""></li>
+					<li><img src="images/slideshow/laptop-slideshow3.png" alt=""></li>
+					<li><img src="images/slideshow/laptop-slideshow4.png" alt=""></li>
+					<li><img src="images/slideshow/laptop-slideshow5.png" alt=""></li>
+					<li><img src="images/slideshow/laptop-slideshow6.png" alt=""></li>
+				</ul>
+			</div>
+		</div>
+	</article>
+	
+	<!-- the PARTNERS -->
+	<article class="article clearfix" style="padding:0;margin:0em;">
+		<div class="grey" style="border-top : 1px #ccc solid;border-bottom : 1px #ccc solid;">
+			<h1 class="col_100 thin center" style="padding:0;margin:0;">Partners</h1>
+		</div>
+		<div class="col_100 center white aligner" style="padding:1em;margin:0;">
+			<a href="http://xrce.xerox.com/" title="We do big data and map visualization together"><img src="images/xerox.png" alt="xerox" class="partner" /></a>
+			<a href="http://linkfluence.net/" title="We do analyze social media and China together"><img src="images/linkfluence.png" alt="linkfluence" class="partner" /></a>
+			<a href="http://www.cityzendata.com/" title="We store geotime series nd do city intelligence together"><img src="images/citizenData.svg" onerror="this.onerror=null; this.src='images/citizenData.png'" class="partner"></a>
+		</div>
+	</article>	
+    
+{% include footer.html %}

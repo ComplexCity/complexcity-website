@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="{{ page.Author }}">
+  <meta name="keywords" content="{{ page.Keywords }}">
+  <meta name="description" content="{{ page.Description }}"> 
+  
+  <!-- the favicon -->
+  <link rel="icon" type="image/png" href="{{ site.url }}/images/favicon/complexcity.png" />			
+  <link rel="icon" type="image/x-icon" href="{{ site.url }}/images/favicon/complexcity.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/images/favicon/complexcity-retina.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.url }}images/favicon/complexcity-ipad.png" />
+  <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/favicon/complexcity-iphone.png" />
+
+  <!-- the style -->
+  <link rel="stylesheet" href="{{ site.url }}/css/style.css" />
+  
+  <!-- the scripts -->
+  <script src="{{ site.url }}/scripts/jquery-1.11.1.min.js"></script>
+  <script src="{{ site.url }}/scripts/responsiveslides.min.js"></script>
+  <script src="{{ site.url }}/scripts/complexcity.js"></script>
+  <script src="{{ site.url }}/scripts/Autolinker.min.js"></script>
+  <script src="{{ site.url }}/scripts/jquery.equalheights.min.js"></script>
+
+  {% if page.Name == 'about' %}
+  <!-- add mapbox requirements -->
+  <script src='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.css' rel='stylesheet' />
+  
+  <!-- Add fancyBox -->
+  <link rel="stylesheet" href="{{ site.url }}/scripts/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+  <script type="text/javascript" src="{{ site.url }}/scripts/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>  
+  
+  <script type="text/javascript">
+  	$(document).ready(function() {
+  		$(".fancybox").fancybox();
+  	});
+  </script>
+  
+  {% endif %}
+
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <!-- the title -->
+  <title>{{ page.title }}</title>  
+  
+</head>
+<body>

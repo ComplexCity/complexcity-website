@@ -1,0 +1,65 @@
+{% include header.html %}
+{% assign author = site.data.authors[page.author] %}
+	<div class="invert-header-color" style="margin:0; width:100%;">
+	<header class="header clearfix container">
+      <!-- the LOGO -->
+      <div class="logo">
+      	<a href="{{ site.url }}" alt="Complexcity Lab home" title="go home">
+      		<img src="{{ site.url }}/images/logo-ComplexCity-white.svg" onerror="this.onerror=null; this.src='images/logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
+	    </a>
+	  </div>
+      
+      <!--the MENU -->
+      <nav class="menu_main">
+        <ul>
+		  <li><a href="{{ site.url }}/projects/">PROJECTS</a></li>
+		  <li><a href="{{ site.url }}/studies/">STUDIES</a></li>
+		  <li class="active"><a href="{{ site.url }}/blog/">BLOG</a></li>
+		  <li><a href="{{ site.url }}/about/">ABOUT US</a></li>
+        </ul>
+      </nav>
+      
+      <!-- credit work in the top corner, image in css -->
+    </header>
+    </div>
+
+	<article class="article clearfix" style="padding-top:3em;">
+		<h1 class="col_100 thin center"> {{page.title}} </h1>
+		<p><img class="clearfix blog-img-full-size" alt="{{page.image_alt}}" src="{{page.image_big}}" />
+		</p>
+		<div class="blog-container">
+			{{ content }}
+		</div>
+		<div class="blog-container clearfix thin right">
+			Published on {{ page.date | date_to_string }} &bull; <a href="https://twitter.com/intent/tweet?url={{permalink}}&text={{page.title}}&via=complexcity_lab" target="_blank">share {{page.title}}</a> by {{author.display_name}}
+			{% if author.chinese_name != '' %}
+			 ({{author.chinese_name}})
+			{% endif %}
+			{% if author.description != '' %}
+			<h3 class="thin center">About the author</h3>
+			<p style="margin-top:0.2em;font-style: italic;text-align:left">{{author.description}}</p>
+			{% endif %}
+		</div>
+		<div class="blog-container clearfix thin">
+		{% if page.comments %}
+		
+		 <div id="disqus_thread"></div>
+		 <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'complexcitylab'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink small">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+		{% endif %}
+		</div>
+	</article>
+		
+{% include footer.html %}

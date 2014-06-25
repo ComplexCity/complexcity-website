@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="Fabien Pfaender">
+  <meta name="keywords" content="">
+  <meta name="description" content=""> 
+  
+  <!-- the favicon -->
+  <link rel="icon" type="image/png" href="http://localhost:4000/images/favicon/complexcity.png" />			
+  <link rel="icon" type="image/x-icon" href="http://localhost:4000/images/favicon/complexcity.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/favicon/complexcity-retina.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000images/favicon/complexcity-ipad.png" />
+  <link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/favicon/complexcity-iphone.png" />
+
+  <!-- the style -->
+  <link rel="stylesheet" href="http://localhost:4000/css/style.css" />
+  
+  <!-- the scripts -->
+  <script src="http://localhost:4000/scripts/jquery-1.11.1.min.js"></script>
+  <script src="http://localhost:4000/scripts/responsiveslides.min.js"></script>
+  <script src="http://localhost:4000/scripts/complexcity.js"></script>
+  <script src="http://localhost:4000/scripts/Autolinker.min.js"></script>
+  <script src="http://localhost:4000/scripts/jquery.equalheights.min.js"></script>
+
+  
+  <!-- add mapbox requirements -->
+  <script src='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.css' rel='stylesheet' />
+  
+  <!-- Add fancyBox -->
+  <link rel="stylesheet" href="http://localhost:4000/scripts/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+  <script type="text/javascript" src="http://localhost:4000/scripts/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>  
+  
+  <script type="text/javascript">
+  	$(document).ready(function() {
+  		$(".fancybox").fancybox();
+  	});
+  </script>
+  
+  
+
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <!-- the title -->
+  <title>About the lab</title>  
+  
+</head>
+<body>
+<header class="header clearfix container">
+      <!-- the LOGO -->
+      <div class="logo">
+      	<a href="complexcity.org" alt="Complexcity Lab home" title="go home">
+      		<img src="http://localhost:4000/images/logo-ComplexCity.svg" onerror="this.onerror=null; this.src='http://localhost:4000/images//logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
+	    </a>
+	  </div>
+      
+      <!--the MENU -->
+      <nav class="menu_main">
+			<ul>
+				<li><a href="http://localhost:4000/">The Lab</a></li>
+				<li><a href="http://localhost:4000/projects/">Projects</a></li>
+				<li><a href="http://localhost:4000/studies/">Studies</a></li>
+				<li><a href="http://localhost:4000/blog/">Blog</a></li>
+				<li class="active"><a href="#about">About</a></li>
+				</ul>
+		</nav>
+	</header>
+
+    <a name="about"></a>
+    <div class="grey" style="border-bottom:1px solid #ccc;">
+    	<!-- the PunchLine -->
+    	<article class="hero clearfix center punchline">
+        	<div class="col_100 right small center" style="top:-1em;position:relative;font-family: Lato, 'Helvetica Neue', sans-serif;color:rgb(70,70,70);text-shadow: rgb(255, 255, 255) 0px 1px 0px;">
+				<!-- Picture Attribution for Licenced work-->
+				<a style="text-decoration: none;" href="http://creativecommons.org/licenses/by-sa/2.0/">cc by-nc-sa</a><a href="http://www.flickr.com/photos/stuckincustoms/8242941446/" style="text-decoration: none;">, photo by stuckincustoms</a>
+			</div>
+		</article>
+
+		<!-- the 3 BOXES -->
+		<article class="article clearfix">
+			<div class="container">
+				<a name="about"></a>
+				<!-- the WHO -->
+				<div class="col_33">
+					<h2 class="center thin">Who We Are</h2>
+					<p>ComplexCity lab was created in July 2013 between the 3 Universities of Technology in France (UTBM, UTC, UTT) and Shanghai University. The lab is lead by a binational steering committee and a scientific board.</p>
+					<h3 style="margin-bottom:0.1em;">French board<span class="small, thin"> (UT group)</span></h3> 
+					<ul class="thin breakingNews left" style="margin-top:0">
+						<li><strong>Director</strong> — MonZen Tzen </li>
+						<li><strong>Coordinator in France</strong> — Bruno Bachimont</li>
+						<li><strong>Coordinator in China</strong> — Fabien Pfaender</li>
+					</ul>
+					<h3 style="margin-bottom:0.1em;">Chinese board<span class="small, thin"> (Shanghai University)</span></h3> 
+					<ul class="thin breakingNews left" style="margin-top:0">
+						<li><strong>Director</strong> — 万旺根 (Wan WangGen)</li>
+						<li><strong>Coordinator</strong> — To be determined </li>
+					</ul>
+				</div>
+
+				<!-- the WHAT -->
+				<div class="col_33 left">
+					<h2 class="center thin">What We Do</h2>
+					<ul class="breakingNews left">
+						<li style="margin-bottom:0.5em"><span class="normal">ComplexCity lab is an incubator for city related project using technology as a catalyst</span></li>
+						<li><strong>Strategic Foresight</strong> for comprehensive research related to cities and international funding opportunities</li>
+						<li><strong>Capture</strong> massive digital city data</li>
+						<li><strong>Create & Design</strong> city-related visualizations and services</li>
+						<li><strong>Think Tank</strong> for Smart Cities in France, Europe and China with interdisciplinary open event</li>
+						<li style="margin-bottom:0.5em"><strong>Develop and Share</strong> methods and tools for Urban Complex-Systems Analysis </li>
+					</ul>	 
+				</div>
+
+				<!-- the WHERE -->
+				<div class="col_33">  
+					<div style="position: relative;height: 300px;width:auto" class="clearfix"><div id='map'></div></div>
+					<script type='text/javascript'>
+						var map = L.mapbox.map('map', 'shangdaemon.map-glhkh389');
+					</script>
+					<p>Building E, Room 600, Shanghai University, Baoshan Campus, 99 Shangda Road, Shanghai<br />
+					宝山区上大路99号, 上海大学宝山校区, E楼600室 <br />
+					<a href="http://localhost:4000/about/taxi.html" target="_blank">Taxi Printout</a></p>
+				</div>
+			</div>
+		</article>
+	</div>
+    
+    <!-- the SOCIAL BAR -->
+	<article class="article punchline">
+		<div class="col_100 center ">
+			<!--<h1>ComplexCity</h1>-->
+			<p class="small thin" style="margin-bottom:1em">FOLLOW US OR CONTACT US ON</p>
+			<a href="https://github.com/ComplexCity/" title="our github repository" target="_blank">
+				<img class="follow-us" src="http://localhost:4000/images/follow-us-github.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-github-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-github.svg'" /></a>
+			<a href="https://speakerdeck.com/complexcity" title="our presentations on speakerdeck" style="margin-left:1em;" target="_blank">
+				<img class="follow-us" src="http://localhost:4000/images/follow-us-speakerdeck.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-speakerdeck-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-speakerdeck.svg'" /></a>
+			<a href="http://twitter.com/complexcity_lab" title="our twitter account" style="margin-left:1em;" target="_blank">
+				<img class="follow-us" src="http://localhost:4000/images/follow-us-twitter.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-twitter-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-twitter.svg'"/></a>
+			<a href="http://www.weibo.com/complexcity" title="our weibo account" style="margin-left:1em;" target=_blank>
+				<img class="follow-us"  src="http://localhost:4000/images/follow-us-weibo.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-weibo-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-weibo.svg'"/></a>
+			<a href="https://www.linkedin.com/company/complexcity-lab" title="ComplexCity Linkedin page" style="margin-left:1em;" target=_blank>
+				<img class="follow-us"  src="http://localhost:4000/images/follow-us-linkedin.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-linkedin-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-linkedin.svg'"/></a>
+			<a href="" title="ComplexCity" style="margin-left:1em;" target=_blank>
+				<img class="follow-us"  src="http://localhost:4000/images/follow-us-syndication.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-syndication-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-syndication.svg'"/></a>
+			<a href="https://pinboard.in/u:shangdaemon/public/" title="our web links" style="margin-left:1em;" target=_blank>
+				<img class="follow-us"  src="http://localhost:4000/images/follow-us-pinboard.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-pinboard-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-pinboard.svg'"/></a>
+			<a href="https://www.goodreads.com/review/list/32004943?shelf=read" title="the books we like" style="margin-left:1em;" target=_blank>
+				<img class="follow-us"  src="http://localhost:4000/images/follow-us-goodreads.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-goodreads-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-goodreads.svg'"/></a>
+			<a href="mailto:fabienDOTpfaenderATutseusDOTcom?subject=ComplexCity%20Lab%20Contact&body=REPLACE%20DOT%20AND%20AT%20IN%20THE%20MAIL%20ADDRESS%20WITH%20THEIR%20CHARACTERS%20EQUIVALENT" title="email us right away" style="margin-left:1em;">
+				<img class="follow-us"  src="http://localhost:4000/images/follow-us-email.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-email-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-email.svg'"/></a>
+			<a href="http://localhost:4000/images/labo-phone.png" class="fancybox" title="Give us a call" style="margin-left:1em;" target=_blank>
+				<img class="follow-us"  src="http://localhost:4000/images/follow-us-phone.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-phone-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-phone.svg'"/></a>
+		</div>
+	</article>
+      
+    <!-- the MAIN CONTENT -->
+	<article class="article clearfix" style="padding-top:0em;">
+    	<h1 class="thin center">A Comprehensive Team</h1>
+    	<div class="container">
+	    	<p>ComplexCity hosts 16 interdisciplinary research projects on cities which have at least one French and one Chinese researcher. In addition to these projects we are developing a conceptual framework aimed at creating a science of cities. </p>
+	    	<div class="col_50">
+	    		<ol>
+			    	<li>We develop strategies and a platform for <span class="importantNews">large scale dynamic heterogenous urban data capture</span> (including traditional non digital data) and data high performance / high availability storage. We design simple end-point so that scientist from various disciplines can use them as simply as possible. This makes quantitative and qualitative data available to all our researchers and partners</li>
+					<li>We <span class="importantNews">explore massive urban data</span> using a wide range of data science techniques: machine learning (supervised and unsupervised classification), probabilist methods, design methodologies, 3D modeling,  geographic and information visualization, language processing, serious gaming. We create methods and tools to be used by all lab partners.</li>
+					<li>We use the result of the two previous step to <span class="importantNews">study complex interdisciplinary issues in the city</span>: citizen health awareness, building of a smart green creative sustainable and lovable city, improving car traffic/walking conditions, modelization of places behaviors and characteristics, smart cctv use for security, livability and mobility.</li>
+					<li>We <span class="importantNews">design online city services and serious games</span> for citizens, companies and government based on our multi-layered data for them to explore, know better, and improve policies of their city. It also help in return crowd source urban data.</li>
+					</ol>
+				</div>
+	    	<div class="col_50">
+				<ul class="rslides">
+					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow1.png" alt=""></li>
+					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow2.png" alt=""></li>
+					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow3.png" alt=""></li>
+					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow4.png" alt=""></li>
+					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow5.png" alt=""></li>
+					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow6.png" alt=""></li>
+				</ul>
+	    	</div>
+    	</div>
+	</article>
+<div class="before-footer center clearfix"></div>
+	<footer class="footer clearfix grey">
+		<article class="article clearfix">
+			<div class="col_100 center clearfix">
+				<p class="thin">Complexcity Lab is a collaboration between french Université de Technologie Group and Shanghai University</p>
+				<!-- the OFFICIAL CREDIT -->
+				<a href="http://interactions.utc.fr/Le-Groupe-UT-avance-en-reseau" alt="UT Group" title="UT Group" class="col_50 center"><img class="img-logo" src="http://localhost:4000/images/logo-3UT.svg" /></a>
+				<a href="http://shu.edu.cn" alt="Shanghai University logo black and white" title="go to Shanghai University homepage" class="col_50 center"><img class="img-logo" src="http://localhost:4000/images/logo-SHU-black-SD.png" /></a>
+			</div>
+
+			<!-- the LICENCE -->
+			<div class="thin small col_50">
+				<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ComplexCity Laboratory website</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.complexcity.org" property="cc:attributionName" rel="cc:attributionURL">ComplexCity Laboratory</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a></p>
+				<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>This website code is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a></p>
+			</div>
+		</article>
+	</footer>
+</body>
+</html>
