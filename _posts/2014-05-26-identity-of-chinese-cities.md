@@ -55,7 +55,7 @@ If Chinese cities are willing to achieve their ambitions and be highly competiti
 7. <a name="7"></a>*Public Participation Issues in Preservation Planning: Practices of Chinese Historic District* by Li Yi, University of Pennsylvania
 8. <a name="8"></a>[中华人民共和国城乡规划法][8] (Urban and Rural Planning Law of the People’s Republic of China)
 9. <a name="9"></a>*City repositioning and competitiveness building in regional development: new development strategies in Guangzhou, China* by Jiang Xu and Anthony G.O. Yeh
-10.<a name="9"></a>[CEOs for Cities][10]
+10. <a name="9"></a>[CEOs for Cities][10]
 
 
 [1]:http://www.goodreads.com/book/show/11452166-the-spirit-of-cities	"The spirit of Cities"
