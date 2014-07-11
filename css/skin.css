@@ -523,6 +523,11 @@ a.button:active,
 	width: 60%;
 	margin:3% 3% 3% 35%;
 }
+input {
+	border-radius:5px;
+	border:1px solid #ccc;
+	line-height:1.5em;
+}
 
 @media only screen and (max-width:480px) { /* Smartphone custom styles */
   .header:before,

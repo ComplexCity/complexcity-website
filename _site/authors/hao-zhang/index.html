@@ -27,6 +27,9 @@
   
 
   
+  <script src="/scripts/site-search.js"></script>
+	<script src="/scripts/porter-stemmer.js"></script>
+	
 		
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -36,15 +39,33 @@
 </head>
 <body>
 	<div class="invert-header-color" style="margin:0; width:100%;">
-	<header class="header clearfix container">
-      <!-- the LOGO -->
+		<header class="header clearfix container">
+			<!-- the LOGO -->
       <div class="logo">
       	<a href="/" alt="Complexcity Lab home" title="go home">
       		<img src="http://localhost:4000/images/logo-ComplexCity-white.svg" onerror="this.onerror=null; this.src='images/logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
-	    </a>
-	  </div>
+	    	</a>
+	    </div>
       
-      <!--the MENU -->
+ 	  	<!-- the SOCIAL links -->
+	  	<div id="social">
+				 <a href="https://github.com/ComplexCity/" title="our github repository" target="_blank">
+					 <img src="http://localhost:4000/images/follow-us-github-white.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-github-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-github-white.svg'" /></a>
+				 <a href="https://speakerdeck.com/complexcity" title="our presentations on speakerdeck" target="_blank">
+					 <img src="http://localhost:4000/images/follow-us-speakerdeck-white.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-speakerdeck-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-speakerdeck-white.svg'" /></a>
+				 <a href="http://twitter.com/complexcity_lab" title="our twitter account" target="_blank">
+					 <img src="http://localhost:4000/images/follow-us-twitter-white.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-twitter-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-twitter-white.svg'"/></a>
+				 <a href="http://www.weibo.com/complexcity" title="our weibo account" target=_blank>
+					 <img src="http://localhost:4000/images/follow-us-weibo-white.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-weibo-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-weibo-white.svg'"/></a>
+				 <a href="/blog/feed.xml" title="ComplexCity Lab's Blog RSS feed" target=_blank>
+					 <img src="http://localhost:4000/images/follow-us-syndication-white.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-syndication-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-syndication-white.svg'"/></a>
+				 <a href="https://pinboard.in/u:shangdaemon/public/" title="our web links" target=_blank>
+					 <img src="http://localhost:4000/images/follow-us-pinboard-white.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-pinboard-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-pinboard-white.svg'"/></a>
+				 <a href="https://www.goodreads.com/review/list/32004943?shelf=read" title="the books we like" target=_blank>
+					 <img src="http://localhost:4000/images/follow-us-goodreads-white.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-goodreads-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-goodreads-white.svg'"/></a>
+			</div>
+
+			<!--the MENU -->
       <nav class="menu_main">
         <ul>
           <li><a href="/about/">ABOUT</a></li>
@@ -56,109 +77,219 @@
       
       <!-- credit work in the top corner, image in css -->
     </header>
-    </div>
-    <article class="article punchline">
-	  	<div class="col_100 center ">
-          <!--<h1>ComplexCity</h1>-->
-          <h2 style="font-weight: 300;">A COMPREHENSIVE BLOG ON SMART &amp; SOCIAL CITY</h2>
-	  	</div>
-	</article>
- 
-		<div class="col_66 clearfix" style="" >
+  </div>
+	
+	<aside id="blog-sidebar">
+
+		<!-- the TWEETS -->
+		<section>
+			<h3 style="margin-top:0">
+				<span class="twitter">@complexcity</span><a class="twitter" href="http://twitter.com/complexcity_lab" ><img src="/images/twitter.png" class="twitter" /></a>
+				<a class="twitter" href="http://www.weibo.com/complexcity"><img src="/images/weibo.png" class="twitter" /></a>
+			</h3>
+			<ul id="twitter">
+			</ul>
+		</section>
+   	
+   	<section>
+   		<h3>Recently</h3>
+			<ul class="posts-simple-list">
+				
+				<li>
+					<a href="/2014/06/23/.html">What is a city?</a>
+				</li>
+				
+				<li>
+					<a href="/2014/06/16/.html">Tianzifang: Community or Tourism?</a>
+				</li>
+				
+				<li>
+					<a href="/2014/06/09/.html">Small or medium size cities? Or big cities? A hukou-based analysis</a>
+				</li>
+				
+				<li>
+					<a href="/2014/06/02/.html"></a>
+				</li>
+				
+				<li>
+					<a href="/china/cities/2014/05/26/identity-of-chinese-cities.html">Identity of Chinese cities</a>
+				</li>
+				
+				<li>
+					<a href="/2014/05/26/.html">Some thoughts during the Youth Planners' Innovation Forum at Tongji University</a>
+				</li>
+				
+				<li>
+					<a href="/2014/05/19/hukou-system-for-college-graduates.html">Hukou system for college graduates</a>
+				</li>
+				
+				<li>
+					<a href="/china/cities/2014/05/12/identity-of-chinese-cities.html">Identity of Chinese cities</a>
+				</li>
+				
+				</ul>	
+		</section>
 		
-			
-			<div style="margin-bottom:2em;">
-				<div class="col_50">
-					<img class="clearfix blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
-				</div>
-				<div class="col_50">
-					<h3 class="thin" style="margin-top:0.2em"> &bull; 23 Jun 2014<br/><a href="/2014/06/23/.html" class="no-decoration">WHAT IS A CITY?</a></h3>
-					<p>The outstanding work of <em>The Spirit of Cities</em> [<a href="#1">1</a>] by Bell and de-Shalit gives a very interesting point of view at how some cities are unique for their citizens. As a matter of fact more and more Chinese citizens feel detached from their cities. They find it difficult to recognize their city identity whereas identity might be a key factor to integrate millions of people in a short time to new urban area without them feeling they do not belong here or that they live just-another-lambda city.</p>
-					<p><a href="/2014/06/23/.html">Read more…</a></p>			
-				</div>
-			</div>
-			
+		<section>
+			<h3>Search
+				<form method="get" class="form-search">
+					<input type="text" id="search-text" name="search-text" />
+				</form>
+			</h3>
+			<ul id="search-results">
+			</ul>
+		</section>
+
+	</aside>
+
+<script lang="javascript">
+(function() {
+	$.getJSON("/json/twitter.json")
+		.done(function(data) {
+			var tweetDisplay = 4;
+			var autolinker = new Autolinker( { newWindow: true} );
+			$.each(data, function(i, item) {
+				var linkedText = autolinker.link(item.text);
+				var linkedDate = autolinker.link(item.date);
+				$( "<li><span class=\"date\">" + linkedDate.toUpperCase() + "</span><br/>" + linkedText + "</li>").appendTo( "#twitter" );
+				if ( i === tweetDisplay ) {
+					return false;
+				}
+			});
+		});
+})();
+</script>
+
 		
-			
-			<div style="margin-bottom:2em;">
-				<div class="col_50">
-					<img class="clearfix blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
-				</div>
-				<div class="col_50">
-					<h3 class="thin" style="margin-top:0.2em"> &bull; 16 Jun 2014<br/><a href="/2014/06/16/.html" class="no-decoration">TIANZIFANG: COMMUNITY OR TOURISM?</a></h3>
-					<p>Tianzifang (田子坊) is an arts and crafts enclave that has developed from a renovated residential area in Shanghai, China. It is known for small craft stores, coffee shops, art studios and narrow alleys. “Despite all the businesses selling trendy foreign goods, the area does not have the look of having been overly beautified - electricity cables are still strung overhead, and air conditioning units are obvious on the outside of the buildings. The district is distinctly different from Xintiandi, another Shikumen redevelopment in the vicinity to the north, in that it has managed to preserve its residential feel, adding to its appeal.”1 However, to preserve this “residential feel”, conflicts among local residents, developers, shop owners, and tourists are getting increasingly intensive, which brought us an inevitable question: should we pay more attention to a healthy-growing community or an economic-beneficial tourism?</p>
-					<p><a href="/2014/06/16/.html">Read more…</a></p>			
-				</div>
-			</div>
-			
-		
-			
-			<div style="margin-bottom:2em;">
-				<div class="col_50">
-					<img class="clearfix blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
-				</div>
-				<div class="col_50">
-					<h3 class="thin" style="margin-top:0.2em"> &bull; 09 Jun 2014<br/><a href="/2014/06/09/.html" class="no-decoration">SMALL OR MEDIUM SIZE CITIES? OR BIG CITIES? A HUKOU-BASED ANALYSIS</a></h3>
-					<p>According to comprehensive and publicly available statistical data, the cost of “urbanizing” each person is approximately 20,000 yuan in a small city, and 100,000 yuan in a large one. With Kam Wing Chan’s calculation of the overall cost of urbanizing the entire floating population and its fiscal impact, offering urban hukou to 20 million people per year (assuming that the migrant population will reach 300 million by 2030) in big cities would cost 50 billion yuan, aka 0.1 % of China’s GDP, a figure within the country’s affordability. It brings out the position we stand for, since big cities are capable to afford the cost of urbanizing the floating population, the small or middle ones should be better as the cost of “per-capita urbanization” is lower. Is it sustainable to continue the policy and investment preference to big cities, or should we reconsider the role of small or medium size cities in China’s urbanization?</p>
-					<p><a href="/2014/06/09/.html">Read more…</a></p>			
-				</div>
-			</div>
-			
-		
-			
-			<div style="margin-bottom:2em;">
-				<div class="col_50">
-					<img class="clearfix blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
-				</div>
-				<div class="col_50">
-					<h3 class="thin" style="margin-top:0.2em"> &bull; 02 Jun 2014<br/><a href="/2014/06/02/.html" class="no-decoration"></a></h3>
+
+		<div id="posts" class="clearfix">
+			<div>
+				<div class="author-photo">
 					
-					<p><a href="/2014/06/02/.html">Read more…</a></p>			
+						<img src="/assets/hao.jpg" class="avatar"/>
+					
 				</div>
+				<div class="author-about">
+					Zhang Hao (张昊)
+					<p>Hao is a research engineer in urbanism.</p>
+				</div>
+
 			</div>
-			
+
 		
 			
-			<div style="margin-bottom:2em;">
+			<div>
 				<div class="col_50">
-					<img class="clearfix blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
+					<img class="blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
 				</div>
-				<div class="col_50">
-					<h3 class="thin" style="margin-top:0.2em"> &bull; 26 May 2014<br/><a href="/2014/05/26/.html" class="no-decoration">SOME THOUGHTS DURING THE YOUTH PLANNERS' INNOVATION FORUM AT TONGJI UNIVERSITY</a></h3>
-					<p>It is important to differ migrant workers and migrants when conducting research on public policy for coordinating rural and urban development. Migrant workers pursue the most interest for working in a city while migrants pursue to be involved in urban life and social inclusion. Is it necessary to provide low-rent housing for migrant workers? They don’t seek to live in cities, but only to make as much profits as they can. To those who really intend to be members of urban society, we should not just offer them urban identity such as urban hukou, but also make them feel involved by organizing community participation, etc.. Li Zhigang (Sun Yat-sen University)’s research shows that, valuing the role of Middle class when proposing planning mechanism for mix-living model may be beneficial for .</p>
-					<p><a href="/2014/05/26/.html">Read more…</a></p>			
-				</div>
-			</div>
-			
-		
-			
-			<div style="margin-bottom:2em;">
-				<div class="col_50">
-					<img class="clearfix blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
-				</div>
-				<div class="col_50">
-					<h3 class="thin" style="margin-top:0.2em"> &bull; 19 May 2014<br/><a href="/2014/05/19/hukou-system-for-college-graduates.html" class="no-decoration">HUKOU SYSTEM FOR COLLEGE GRADUATES</a></h3>
-					<p>In China, each person has a registration (hukou) in either a rural area or an urban area, and cannot change the hukou without the permission of the receiving jurisdiction. David Dollar, World Bank Country, explains “Hukou system kept rural-urban migration below what it otherwise would have been, and contributed to the development of one of the largest rural-urban income divides in the world.” In short, it is much like a green card or “internal passport” that provides its bearer access to public service, such as health care, education, etc.</p>
-					<p><a href="/2014/05/19/hukou-system-for-college-graduates.html">Read more…</a></p>			
-				</div>
-			</div>
-			
-		
-			
-			<div style="margin-bottom:2em;">
-				<div class="col_50">
-					<img class="clearfix blog-img-full-size" alt="workers on a construction site" src="http://localhost:4000/assets/identity-of-chinese-cities-square.png" />
-				</div>
-				<div class="col_50">
-					<h3 class="thin" style="margin-top:0.2em"> &bull; 12 May 2014<br/><a href="/china/cities/2014/05/12/identity-of-chinese-cities.html" class="no-decoration">IDENTITY OF CHINESE CITIES</a></h3>
+				<div class="col_50" style="margin-bottom:3em;">
+					<h2 style="margin-top:0.2em"><a href="/2014/06/23/.html" class="no-decoration">WHAT IS A CITY?</a></h2>
+					<p class="thin"> &bull; 23 Jun 2014</p>
 					<p>The outstanding work of <em>The Spirit of Cities</em> [<a href="#1">1</a>] by Bell and de-Shalit gives a very interesting point of view at how some cities are unique for their citizens. As a matter of fact more and more Chinese citizens feel detached from their cities. They find it difficult to recognize their city identity whereas identity might be a key factor to integrate millions of people in a short time to new urban area without them feeling they do not belong here or that they live just-another-lambda city.</p>
-					<p><a href="/china/cities/2014/05/12/identity-of-chinese-cities.html">Read more…</a></p>			
+					<p><a href="/2014/06/23/.html">Read more…</a></p>					
+				</div>
+			</div>
+			
+		
+			
+			<div>
+				<div class="col_50">
+					<img class="blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
+				</div>
+				<div class="col_50" style="margin-bottom:3em;">
+					<h2 style="margin-top:0.2em"><a href="/2014/06/16/.html" class="no-decoration">TIANZIFANG: COMMUNITY OR TOURISM?</a></h2>
+					<p class="thin"> &bull; 16 Jun 2014</p>
+					<p>Tianzifang (田子坊) is an arts and crafts enclave that has developed from a renovated residential area in Shanghai, China. It is known for small craft stores, coffee shops, art studios and narrow alleys. “Despite all the businesses selling trendy foreign goods, the area does not have the look of having been overly beautified - electricity cables are still strung overhead, and air conditioning units are obvious on the outside of the buildings. The district is distinctly different from Xintiandi, another Shikumen redevelopment in the vicinity to the north, in that it has managed to preserve its residential feel, adding to its appeal.”1 However, to preserve this “residential feel”, conflicts among local residents, developers, shop owners, and tourists are getting increasingly intensive, which brought us an inevitable question: should we pay more attention to a healthy-growing community or an economic-beneficial tourism?</p>
+					<p><a href="/2014/06/16/.html">Read more…</a></p>					
+				</div>
+			</div>
+			
+		
+			
+			<div>
+				<div class="col_50">
+					<img class="blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
+				</div>
+				<div class="col_50" style="margin-bottom:3em;">
+					<h2 style="margin-top:0.2em"><a href="/2014/06/09/.html" class="no-decoration">SMALL OR MEDIUM SIZE CITIES? OR BIG CITIES? A HUKOU-BASED ANALYSIS</a></h2>
+					<p class="thin"> &bull; 09 Jun 2014</p>
+					<p>According to comprehensive and publicly available statistical data, the cost of “urbanizing” each person is approximately 20,000 yuan in a small city, and 100,000 yuan in a large one. With Kam Wing Chan’s calculation of the overall cost of urbanizing the entire floating population and its fiscal impact, offering urban hukou to 20 million people per year (assuming that the migrant population will reach 300 million by 2030) in big cities would cost 50 billion yuan, aka 0.1 % of China’s GDP, a figure within the country’s affordability. It brings out the position we stand for, since big cities are capable to afford the cost of urbanizing the floating population, the small or middle ones should be better as the cost of “per-capita urbanization” is lower. Is it sustainable to continue the policy and investment preference to big cities, or should we reconsider the role of small or medium size cities in China’s urbanization?</p>
+					<p><a href="/2014/06/09/.html">Read more…</a></p>					
+				</div>
+			</div>
+			
+		
+			
+			<div>
+				<div class="col_50">
+					<img class="blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
+				</div>
+				<div class="col_50" style="margin-bottom:3em;">
+					<h2 style="margin-top:0.2em"><a href="/2014/06/02/.html" class="no-decoration"></a></h2>
+					<p class="thin"> &bull; 02 Jun 2014</p>
+					
+					<p><a href="/2014/06/02/.html">Read more…</a></p>					
+				</div>
+			</div>
+			
+		
+			
+			<div>
+				<div class="col_50">
+					<img class="blog-img-full-size" alt="workers on a construction site" src="http://localhost:4000/assets/identity-of-chinese-cities-square.png" />
+				</div>
+				<div class="col_50" style="margin-bottom:3em;">
+					<h2 style="margin-top:0.2em"><a href="/china/cities/2014/05/26/identity-of-chinese-cities.html" class="no-decoration">IDENTITY OF CHINESE CITIES</a></h2>
+					<p class="thin"> &bull; 26 May 2014</p>
+					<p>The outstanding work of <a href="http://www.goodreads.com/book/show/11452166-the-spirit-of-cities">The Spirit of Cities</a>(<a href="#1">see 1</a>) by Bell and de-Shalit gives a very interesting point of view at how some cities are unique for their citizens. As a matter of fact more and more Chinese citizens feel detached from their cities. They find it difficult to recognize their city identity whereas identity might be a key factor to integrate millions of people in a short time to new urban area without them feeling they do not belong here or that they live just-another-lambda city.</p>
+					<p><a href="/china/cities/2014/05/26/identity-of-chinese-cities.html">Read more…</a></p>					
+				</div>
+			</div>
+			
+		
+			
+			<div>
+				<div class="col_50">
+					<img class="blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
+				</div>
+				<div class="col_50" style="margin-bottom:3em;">
+					<h2 style="margin-top:0.2em"><a href="/2014/05/26/.html" class="no-decoration">SOME THOUGHTS DURING THE YOUTH PLANNERS' INNOVATION FORUM AT TONGJI UNIVERSITY</a></h2>
+					<p class="thin"> &bull; 26 May 2014</p>
+					<p>It is important to differ migrant workers and migrants when conducting research on public policy for coordinating rural and urban development. Migrant workers pursue the most interest for working in a city while migrants pursue to be involved in urban life and social inclusion. Is it necessary to provide low-rent housing for migrant workers? They don’t seek to live in cities, but only to make as much profits as they can. To those who really intend to be members of urban society, we should not just offer them urban identity such as urban hukou, but also make them feel involved by organizing community participation, etc.. Li Zhigang (Sun Yat-sen University)’s research shows that, valuing the role of Middle class when proposing planning mechanism for mix-living model may be beneficial for .</p>
+					<p><a href="/2014/05/26/.html">Read more…</a></p>					
+				</div>
+			</div>
+			
+		
+			
+			<div>
+				<div class="col_50">
+					<img class="blog-img-full-size" alt="" src="http://localhost:4000/assets/" />
+				</div>
+				<div class="col_50" style="margin-bottom:3em;">
+					<h2 style="margin-top:0.2em"><a href="/2014/05/19/hukou-system-for-college-graduates.html" class="no-decoration">HUKOU SYSTEM FOR COLLEGE GRADUATES</a></h2>
+					<p class="thin"> &bull; 19 May 2014</p>
+					<p>In China, each person has a registration (hukou) in either a rural area or an urban area, and cannot change the hukou without the permission of the receiving jurisdiction. David Dollar, World Bank Country, explains “Hukou system kept rural-urban migration below what it otherwise would have been, and contributed to the development of one of the largest rural-urban income divides in the world.” In short, it is much like a green card or “internal passport” that provides its bearer access to public service, such as health care, education, etc.</p>
+					<p><a href="/2014/05/19/hukou-system-for-college-graduates.html">Read more…</a></p>					
+				</div>
+			</div>
+			
+		
+			
+			<div>
+				<div class="col_50">
+					<img class="blog-img-full-size" alt="workers on a construction site" src="http://localhost:4000/assets/identity-of-chinese-cities-square.png" />
+				</div>
+				<div class="col_50" style="margin-bottom:3em;">
+					<h2 style="margin-top:0.2em"><a href="/china/cities/2014/05/12/identity-of-chinese-cities.html" class="no-decoration">IDENTITY OF CHINESE CITIES</a></h2>
+					<p class="thin"> &bull; 12 May 2014</p>
+					<p>The outstanding work of <em>The Spirit of Cities</em> [<a href="#1">1</a>] by Bell and de-Shalit gives a very interesting point of view at how some cities are unique for their citizens. As a matter of fact more and more Chinese citizens feel detached from their cities. They find it difficult to recognize their city identity whereas identity might be a key factor to integrate millions of people in a short time to new urban area without them feeling they do not belong here or that they live just-another-lambda city.</p>
+					<p><a href="/china/cities/2014/05/12/identity-of-chinese-cities.html">Read more…</a></p>					
 				</div>
 			</div>
 			
 		
 		</div>
-    </article>
     
 <div class="before-footer center clearfix"></div>
 	<footer class="footer clearfix grey">
