@@ -1,0 +1,22 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+	<channel>
+		<title>ComplexCity Lab's Blog</title>
+		<link>http://complexcity.org/blog/</link>
+		<description>A Comprehensive Blog on Smart and Social City</description>
+	{% for post in site.posts limit:10 %}
+
+		<item>
+			<title>{{ post.title | xml_escape }}</title>
+			<link>http://complexcity.org/blog/{{ post.url }}</link>
+			<guid isPermaLink="true">http://complexcity.org/blog/{{ post.url }}</guid>
+			<pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+			<description>{{ post.content | xml_escape }}</description>
+		</item>
+	
+	{% endfor %}
+	</channel>
+</rss>

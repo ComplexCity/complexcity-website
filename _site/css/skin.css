@@ -172,7 +172,7 @@ a.no-decoration {
 .menu_main li a:hover,
 .menu_main li a:visited:hover {
   color:black;
-text-decoration:  overline;  
+	text-decoration: overline;  
 }
 
 .menu_main li.active,
@@ -180,6 +180,18 @@ text-decoration:  overline;
   color:black;
   text-decoration:overline;
   cursor:default;
+}
+
+#social {
+	width:100%;
+	text-align:right;
+	margin:0.3em 0 1.5em 0;
+}
+
+#social img {
+	width: 1.5em;
+	height: 1.5em;
+	margin-left:0.5em;
 }
 
 .invert-header-color .menu_main li a,
@@ -472,7 +484,45 @@ a.button:active,
 }
 */
 
+#blog-sidebar {
+	float:left;
+	width: 25%;
+	margin:3%;
+}
+#blog-sidebar h3 {
+	text-align:center;
+	background-color:#f2f2f2;
+	padding:0.7em;
+	font-weight:600;
+	text-shadow:none;
+}
+#blog-sidebar ul {
+	list-style-type:none;
+	padding:0;
+	margin:0 1em;
+}
 
+#twitter .date {
+	color:#e42127;
+	font-size:0.8em;
+}
+#twitter a {
+	font-weight:300;
+}
+
+.posts-simple-list li {
+	display:block;
+	border-bottom:1px solid #f2f2f2;
+	font-size:1.2em;
+	padding:0.5em;
+}
+.posts-simple-list a {
+	text-decoration:none;
+}
+#posts {
+	width: 60%;
+	margin:3% 3% 3% 35%;
+}
 
 @media only screen and (max-width:480px) { /* Smartphone custom styles */
   .header:before,
@@ -490,7 +540,17 @@ a.button:active,
   	text-align: center;
   	padding: 5px 0px 5px 0px;	
   }
-
+  #social {
+  	text-align:center;
+  	margin-top:1em;
+  }
+  #blog-sidebar {
+  	width:100%;
+  }
+  #posts {
+		width: 100%;
+		margin:3%;
+	}
 }
 
 @media only screen and (max-width:768px) { /* Tablet custom styles */
@@ -508,6 +568,13 @@ a.button:active,
   	text-align: center;
   	padding: 5px 0px 5px 0px;	
   }
+   #blog-sidebar {
+  	width:93%;
+  }
+  #posts {
+		width:93%;
+		margin:3%;
+	}
 }
 
 #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -738,4 +805,42 @@ li.slide12:hover {
 	background-color: rgba(223,109,109,0.2);
 }
 
+.cc {
+	text-align: center;
+	margin-top: 5em;
+}
+.cc p {
+	margin: 0;
+	padding: 0;
+}
+
+.post-meta {
+}
+
+.post-author {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
+  margin: 30px 0;
+}
+.author-photo {
+	float: left;
+}
+.avatar {
+	border-radius: 50%;
+}
+.author-about {
+	float: left;
+	margin-left: 30px; 
+}
+a.author {
+  color:#010101;
+  font-size:1.17em;
+  font-weight: bold;
+  color: #010101;
+  text-decoration:none;
+}
+a.author:hover {
+	text-decoration:underline;
+}
 

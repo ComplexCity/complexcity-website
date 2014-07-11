@@ -1,0 +1,52 @@
+---
+title: ComplexCity Lab - Blog
+---
+{% include header.html %}
+	<div class="invert-header-color" style="margin:0; width:100%;">
+	<header class="header clearfix container">
+      <!-- the LOGO -->
+      <div class="logo">
+      	<a href="/" alt="Complexcity Lab home" title="go home">
+      		<img src="{{ site.url }}/images/logo-ComplexCity-white.svg" onerror="this.onerror=null; this.src='images/logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
+	    </a>
+	  </div>
+      
+      <!--the MENU -->
+      <nav class="menu_main">
+        <ul>
+          <li><a href="/about/">ABOUT</a></li>
+          <li><a href="/projects/">PROJECTS</a></li>
+          <li><a href="/studies/">STUDIES</a></li>
+          <li class="active">BLOG</li>
+        </ul>
+      </nav>
+      
+      <!-- credit work in the top corner, image in css -->
+    </header>
+    </div>
+    <article class="article punchline">
+	  	<div class="col_100 center ">
+          <!--<h1>ComplexCity</h1>-->
+          <h2 style="font-weight: 300;">A COMPREHENSIVE BLOG ON SMART &amp; SOCIAL CITY</h2>
+	  	</div>
+	</article>
+ 
+		<div class="col_66 clearfix" style="" >
+		{% for post in site.posts %}
+			{% if post.author == page.author %}
+			<div style="margin-bottom:2em;">
+				<div class="col_50">
+					<img class="clearfix blog-img-full-size" alt="{{post.image_alt}}" src="{{ site.url }}{{post.image_small}}" />
+				</div>
+				<div class="col_50">
+					<h3 class="thin" style="margin-top:0.2em">{{post.author.display_name}} &bull; {{post.date | date_to_string}}<br/><a href="{{ post.url }}" class="no-decoration">{{ post.title | upcase}}</a></h3>
+					{{ post.excerpt }}
+					<p><a href="{{ post.url }}">Read more…</a></p>			
+				</div>
+			</div>
+			{% endif %}
+		{% endfor %}
+		</div>
+    </article>
+    
+{% include footer.html %}

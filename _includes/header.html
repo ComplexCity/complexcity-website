@@ -15,20 +15,20 @@
   <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/favicon/complexcity-iphone.png" />
 
   <!-- the style -->
-  <link rel="stylesheet" href="{{ site.url }}/css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   
   <!-- the scripts -->
-  <script src="{{ site.url }}/scripts/jquery-1.11.1.min.js"></script>
-  <script src="{{ site.url }}/scripts/responsiveslides.min.js"></script>
-  <script src="{{ site.url }}/scripts/complexcity.js"></script>
-  <script src="{{ site.url }}/scripts/Autolinker.min.js"></script>
-  <script src="{{ site.url }}/scripts/jquery.equalheights.min.js"></script>
+  <script src="/scripts/jquery-1.11.1.min.js"></script>
+  <script src="/scripts/responsiveslides.min.js"></script>
+  <script src="/scripts/complexcity.js"></script>
+  <script src="/scripts/Autolinker.min.js"></script>
+  <script src="/scripts/jquery.equalheights.min.js"></script>
 
   {% if page.Name == 'about' %}
   <!-- add mapbox requirements -->
   <script src='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.js'></script>
   <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.css' rel='stylesheet' />
-  
+    
   <!-- Add fancyBox -->
   <link rel="stylesheet" href="{{ site.url }}/scripts/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
   <script type="text/javascript" src="{{ site.url }}/scripts/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>  
@@ -38,9 +38,13 @@
   		$(".fancybox").fancybox();
   	});
   </script>
-  
   {% endif %}
 
+  {% if page.Name == 'blog' %}
+  <script src="/scripts/site-search.js"></script>
+	<script src="/scripts/porter-stemmer.js"></script>
+	{% endif %}
+		
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <!-- the title -->

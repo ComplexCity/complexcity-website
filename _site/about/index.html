@@ -15,20 +15,20 @@
   <link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/favicon/complexcity-iphone.png" />
 
   <!-- the style -->
-  <link rel="stylesheet" href="http://localhost:4000/css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   
   <!-- the scripts -->
-  <script src="http://localhost:4000/scripts/jquery-1.11.1.min.js"></script>
-  <script src="http://localhost:4000/scripts/responsiveslides.min.js"></script>
-  <script src="http://localhost:4000/scripts/complexcity.js"></script>
-  <script src="http://localhost:4000/scripts/Autolinker.min.js"></script>
-  <script src="http://localhost:4000/scripts/jquery.equalheights.min.js"></script>
+  <script src="/scripts/jquery-1.11.1.min.js"></script>
+  <script src="/scripts/responsiveslides.min.js"></script>
+  <script src="/scripts/complexcity.js"></script>
+  <script src="/scripts/Autolinker.min.js"></script>
+  <script src="/scripts/jquery.equalheights.min.js"></script>
 
   
   <!-- add mapbox requirements -->
   <script src='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.js'></script>
   <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.css' rel='stylesheet' />
-  
+    
   <!-- Add fancyBox -->
   <link rel="stylesheet" href="http://localhost:4000/scripts/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
   <script type="text/javascript" src="http://localhost:4000/scripts/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>  
@@ -39,32 +39,50 @@
   	});
   </script>
   
-  
 
+  
+		
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   <!-- the title -->
-  <title>About the lab</title>  
+  <title>ComplexCity Lab - About</title>  
   
 </head>
 <body>
 <header class="header clearfix container">
       <!-- the LOGO -->
       <div class="logo">
-      	<a href="complexcity.org" alt="Complexcity Lab home" title="go home">
+      	<a href="/" alt="Complexcity Lab home" title="go home">
       		<img src="http://localhost:4000/images/logo-ComplexCity.svg" onerror="this.onerror=null; this.src='http://localhost:4000/images//logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
-	    </a>
-	  </div>
+	    	</a>
+	  	</div>
+	  
+	  	<!-- the SOCIAL links -->
+	  	<div id="social">
+	  			<a href="https://github.com/ComplexCity/" title="our github repository" target="_blank">
+						<img src="http://localhost:4000/images/follow-us-github.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-github-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-github.svg'" /></a>
+					<a href="https://speakerdeck.com/complexcity" title="our presentations on speakerdeck" target="_blank">
+						<img src="http://localhost:4000/images/follow-us-speakerdeck.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-speakerdeck-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-speakerdeck.svg'" /></a>
+					<a href="http://twitter.com/complexcity_lab" title="our twitter account" target="_blank">
+						<img src="http://localhost:4000/images/follow-us-twitter.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-twitter-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-twitter.svg'"/></a>
+					<a href="http://www.weibo.com/complexcity" title="our weibo account" target=_blank>
+						<img src="http://localhost:4000/images/follow-us-weibo.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-weibo-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-weibo.svg'"/></a>
+					<a href="/blog/feed.xml" title="ComplexCity Lab's Blog RSS feed" target=_blank>
+						<img src="http://localhost:4000/images/follow-us-syndication.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-syndication-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-syndication.svg'"/></a>
+					<a href="https://pinboard.in/u:shangdaemon/public/" title="our web links" target=_blank>
+						<img src="http://localhost:4000/images/follow-us-pinboard.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-pinboard-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-pinboard.svg'"/></a>
+					<a href="https://www.goodreads.com/review/list/32004943?shelf=read" title="the books we like" target=_blank>
+						<img src="http://localhost:4000/images/follow-us-goodreads.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-goodreads-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-goodreads.svg'"/></a>
+			</div>
       
       <!--the MENU -->
       <nav class="menu_main">
 			<ul>
-				<li><a href="http://localhost:4000/">The Lab</a></li>
-				<li><a href="http://localhost:4000/projects/">Projects</a></li>
-				<li><a href="http://localhost:4000/studies/">Studies</a></li>
-				<li><a href="http://localhost:4000/blog/">Blog</a></li>
-				<li class="active"><a href="#about">About</a></li>
-				</ul>
+        <li class="active">ABOUT</li>
+        <li><a href="/projects/">PROJECTS</a></li>
+        <li><a href="/studies/">STUDIES</a></li>
+        <li><a href="/blog/">BLOG</a></li>
+			</ul>
 		</nav>
 	</header>
 
@@ -104,23 +122,24 @@
 					<h2 class="center thin">What We Do</h2>
 					<ul class="breakingNews left">
 						<li style="margin-bottom:0.5em"><span class="normal">ComplexCity lab is an incubator for city related project using technology as a catalyst</span></li>
-						<li><strong>Strategic Foresight</strong> for comprehensive research related to cities and international funding opportunities</li>
+						<li><strong>Strategic Foresight</strong> for cities-related comprehensive research and international funding opportunities</li>
 						<li><strong>Capture</strong> massive digital city data</li>
 						<li><strong>Create & Design</strong> city-related visualizations and services</li>
-						<li><strong>Think Tank</strong> for Smart Cities in France, Europe and China with interdisciplinary open event</li>
-						<li style="margin-bottom:0.5em"><strong>Develop and Share</strong> methods and tools for Urban Complex-Systems Analysis </li>
+						<li><strong>Think Tank</strong> about Smart Cities in France, Europe and China with interdisciplinary open events</li>
+						<li style="margin-bottom:0.5em"><strong>Develop and Share</strong> methods and tools for Urban Complex-Systems Analysis</li>
 					</ul>	 
 				</div>
 
 				<!-- the WHERE -->
 				<div class="col_33">  
-					<div style="position: relative;height: 300px;width:auto" class="clearfix"><div id='map'></div></div>
+					<h2 class="center thin">Where To Meet Us</h2>
+					<div style="position: relative; height: 220px; width: auto" class="clearfix"><div id='map'></div></div>
 					<script type='text/javascript'>
 						var map = L.mapbox.map('map', 'shangdaemon.map-glhkh389');
 					</script>
-					<p>Building E, Room 600, Shanghai University, Baoshan Campus, 99 Shangda Road, Shanghai<br />
+					<p>Shanghai University, Baoshan Campus,<br/>99 Shangda Road, Building E, Room 600, Shanghai<br />
 					宝山区上大路99号, 上海大学宝山校区, E楼600室 <br />
-					<a href="http://localhost:4000/about/taxi.html" target="_blank">Taxi Printout</a></p>
+					<a href="/about/taxi.html" target="_blank">Taxi Printout</a></p>
 				</div>
 			</div>
 		</article>
@@ -141,7 +160,7 @@
 				<img class="follow-us"  src="http://localhost:4000/images/follow-us-weibo.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-weibo-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-weibo.svg'"/></a>
 			<a href="https://www.linkedin.com/company/complexcity-lab" title="ComplexCity Linkedin page" style="margin-left:1em;" target=_blank>
 				<img class="follow-us"  src="http://localhost:4000/images/follow-us-linkedin.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-linkedin-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-linkedin.svg'"/></a>
-			<a href="" title="ComplexCity" style="margin-left:1em;" target=_blank>
+			<a href="/blog/feed.xml" title="ComplexCity" style="margin-left:1em;" target=_blank>
 				<img class="follow-us"  src="http://localhost:4000/images/follow-us-syndication.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-syndication-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-syndication.svg'"/></a>
 			<a href="https://pinboard.in/u:shangdaemon/public/" title="our web links" style="margin-left:1em;" target=_blank>
 				<img class="follow-us"  src="http://localhost:4000/images/follow-us-pinboard.svg" onmouseover="this.src='http://localhost:4000/images/follow-us-pinboard-hover.svg'" onmouseout="this.src='http://localhost:4000/images/follow-us-pinboard.svg'"/></a>
@@ -169,12 +188,12 @@
 				</div>
 	    	<div class="col_50">
 				<ul class="rslides">
-					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow1.png" alt=""></li>
-					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow2.png" alt=""></li>
-					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow3.png" alt=""></li>
-					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow4.png" alt=""></li>
-					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow5.png" alt=""></li>
-					 <li><img src="http://localhost:4000/imagesslideshow/laptop-slideshow6.png" alt=""></li>
+					 <li><img src="http://localhost:4000/images/slideshow/laptop-slideshow1.png" alt=""></li>
+					 <li><img src="http://localhost:4000/images/slideshow/laptop-slideshow2.png" alt=""></li>
+					 <li><img src="http://localhost:4000/images/slideshow/laptop-slideshow3.png" alt=""></li>
+					 <li><img src="http://localhost:4000/images/slideshow/laptop-slideshow4.png" alt=""></li>
+					 <li><img src="http://localhost:4000/images/slideshow/laptop-slideshow5.png" alt=""></li>
+					 <li><img src="http://localhost:4000/images/slideshow/laptop-slideshow6.png" alt=""></li>
 				</ul>
 	    	</div>
     	</div>
@@ -190,9 +209,9 @@
 			</div>
 
 			<!-- the LICENCE -->
-			<div class="thin small col_50">
-				<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ComplexCity Laboratory website</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.complexcity.org" property="cc:attributionName" rel="cc:attributionURL">ComplexCity Laboratory</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a></p>
-				<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>This website code is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a></p>
+			<div class="cc thin small">
+				<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ComplexCity Laboratory website</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.complexcity.org" property="cc:attributionName" rel="cc:attributionURL">ComplexCity Laboratory</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a></p>
+				<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a> This website code is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a></p>
 			</div>
 		</article>
 	</footer>
