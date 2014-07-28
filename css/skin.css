@@ -485,9 +485,9 @@ a.button:active,
 */
 
 #blog-sidebar {
-	float:left;
 	width: 25%;
 	margin:3%;
+  float:left;
 }
 #blog-sidebar h3 {
 	text-align:center;
@@ -528,6 +528,25 @@ input {
 	border:1px solid #ccc;
 	line-height:1.5em;
 }
+a.underline-hover {
+	text-decoration:none;
+}
+a.underline-hover:hover {
+	text-decoration:underline;
+}
+#author-head {
+	background-color:#f2f2f2;
+	padding:1.5em;
+	margin:0 3% 2em 0;
+	width:93%;
+	float:left;
+}
+#author-head h1 {
+	font-weight:300;
+	font-size:200%;
+	margin-top:0;
+	margin-bottom:0.2em
+}
 
 @media only screen and (max-width:480px) { /* Smartphone custom styles */
   .header:before,
@@ -550,11 +569,15 @@ input {
   	margin-top:1em;
   }
   #blog-sidebar {
-  	width:100%;
+  	width:93%;
   }
   #posts {
-		width: 100%;
+		width:93%;
 		margin:3%;
+	}
+	.post-img {
+		width:100%;
+		margin:0;
 	}
 }
 
@@ -580,6 +603,11 @@ input {
 		width:93%;
 		margin:3%;
 	}
+	.post-img {
+		width:100%;
+		margin:0;
+	}
+
 }
 
 #map { position:absolute; top:0; bottom:0; width:100%; }

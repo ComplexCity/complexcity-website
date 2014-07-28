@@ -1,0 +1,56 @@
+---
+layout: post
+title: "Tianzifang: Community or Tourism?"
+author: Hao
+image_big: /assets/tianzifang-community-or-tourism/big.jpg
+image_small: /assets//tianzifang-community-or-tourism/square.jpg
+image_alt: "Tianzifang"
+comments: true
+keywords:
+description:
+categories:
+
+---
+
+Tianzifang (田子坊) is an arts and crafts enclave that has developed from a renovated residential area in Shanghai, China. It is known for small craft stores, coffee shops, art studios and narrow alleys. “Despite all the businesses selling trendy foreign goods, the area does not have the look of having been overly beautified — electricity cables are still strung overhead, and air conditioning units are obvious on the outside of the buildings. The district is distinctly different from Xintiandi, another Shikumen redevelopment in the vicinity to the north, in that it has managed to preserve its residential feel, adding to its appeal.”\[[1](#1)\] However, to preserve this “residential feel”, conflicts among local residents, developers, shop owners, and tourists are getting increasingly intense, which brought us an inevitable question: how to preserve a declining area and balance healthy community and economic-beneficial tourism in a win-win solution?
+
+##Conflicts Between Stakeholders' Interests
+Tianzifang provides an invaluable opportunity for pouring visitors to engage multiple activities, such as relaxing, shopping, people-watching, and more importantly, to experience authentic Shanghai life and fully contact with [lilong](http://en.wikipedia.org/wiki/Longtang) culture. Besides, all the foreign goods, exotic restaurants, cafe, and bars well represent the openness of Shanghai, and the city's willing to embrace people all around the world. It is strongly appreciated by both Chinese and international visitors.The government and developers (Administrative Committee of Taikanglu Art Street, Shikumen Owners Management Committee (NGO), and artists) emphasize on how to effectively avoid the problems of Xintiandi development mode, which is often criticized as "fake" by tourists, for its lack of residential atmosphere caused by relocation of original communities. From Tianzifang renovation project, we can see developers' effort to uplift local economy while create a mixed-function community and inclusive society, and it is undoubtedly praisable. Moreover, this innovative mode is more appealing to tourists who look forward to experiencing the "good old Shanghai life". Meanwhile, it preserves the traditional Shikumen buildings and Shanghai's lilong (里弄) culture.  A relatively large proportion of senior citizens are living in Tianzifang, and they would rather stay than move to new places. But many of them stick to a routine lifestyle, wake up around 4 am and go to sleep around 8 pm. And these elderly residents don't appreciate much to see their rest time overlaped by the party time of the young generation who come to enjoy a modern nightlife between 9 pm and 3 am! This sort of conflict is not only reflected in Tianzifang though, but in other places where recreation facilities — bars, cafe — are mixed with residential areas, such as Yongkang Rd., etc. To vent their discontent, the local residents call the police to complain about the noise or other infringements caused by the visitors, hang posters or slogans in Tianzifang:
+
+<div style="margin-bottom:1em" class="clearfix">
+<img src="/assets/tianzifang-community-or-tourism/poster.jpg" alt="My helpful screenshot" class="post-img" />
+<p>坚决反对民宿，我们要活命、要生存<br/>We are firmly against boarding house (bed and breakfast), that we need to live and survive.</p>
+<p>坚决禁止噪声扰民，还我一个安静安全的环境<br/>We are firmly against noise nuisance. Give me back my quiet and safe environment!</p>
+<p>强烈要求政府实施晚10时商家停止营业<br/>We strongly demand that the government enforce all shops close business at 10pm.</p>
+</div>
+
+However, the problem is more complex than at first sight. To some extent, this innovative renovation project indeed excludes some residents' expectations for achieving certain benefits from a typical gentrification process, such as a large-scale redevelopment project. Compared with large-scale redevelopment and relocation projects in other parts of Shanghai, it is understandable that local residents are easier to feel injustice and despair of the fact that, after the renovation of Tianzifang, there is barely chance for them to obtain large amounts of relocation compensation like others to move to new-built apartments. This may look quite surprising, considering for example, that in France or other western countries, inhabitants are delighted to see renovation of their communities while they can still keep their everyday life there. Similarly, in Japan, inhabitants tend to put preservation of culture heritage above their own interests. Nonetheless, Chinese residents, especially those who live in old communities with low-income, value more their own benefits. In short, regeneration of Tianzifang deprives the expectation/opportunities of inhabitants for relocation and the following economic profits. 
+
+##Answer: Arts Rejuvenation + E-tourism
+###Arts Rejuvenation
+Tianzifang was named after a famous painter in China’s foundational texts of Daoism “Zhuangzi”, Chapter 21 “Tianzifang”2 (See [Appendix](#appendix)). At the beginning, the renovation of Tianzifang was initiated by a group of famous artists who moved into some simply renovated factory space as their art studios with the intention to rejuvenate the dilapidated community and to make the place better known. Then, an expansion into the residential area progressed beyond factory boundaries, and spaces for creative industry gradually grew into smaller alleys. The architect Hiroyuki Shinohara explains \[[3](#3)\]:
+
+>With the expansion, the artistic atmosphere infiltrated into the Shikumen residential area and changed pure residential characters. The artists and designers settled renovated old houses by themselves and updated the function of the buildings. Interior spaces have been converted into unique spaces for creativity industry, and newly added signs and door fittings on façade interplay with old building structures underlain, and narrow old allays are visually animated.
+
+However, the continuing expansion of non-residential use were extended to more commercial ones such as coffee shops, bars, restaurants, retails. On one hand, this brought considerable economic benefits by attracting thousands of tourists per day; on the other hand, it deteriorated the conflicts between inhabitants and visitors, and went far against its intention as a creative industry accumulated district of Shanghai.
+
+American cities are also actively engaging arts into community revival. For instance, through cultural organization and engagement-based arts programming, the Big Car Project brings together people of all backgrounds in local Indiana communities to inspire creativity and activate public spaces. It collaborates with local residents and stakeholders by forming partnerships in order to build social capital and encourage civically engaged communities. Big Car utilizes the unique “social practice art,” i.e., individuals that may not necessarily define themselves as artists become directly involved in the process of art, building connections and empathy among participants \[[4](#4)\].
+  
+According to the inspiring practice of the Big Car Project and the retrospection of the growing history of Tianzifang, it may be more suitable for the future sustainable development of the area to encourage in-depth public participation into art activities, pursue creative solutions to attract and gather artists, and utilize art and artists to engage residents in a creative dialogue, instead of further turning the area into a tourism-oriented commercial street. It is time to bridge the gap between art institutions and residents, in a word, not just "bring art to people", but also "bring people to art".
+
+###E-tourism
+As French Secretary of State for Foreign Trade, Fleur Pellerin pointed out, "the development of digital technology and mobility constitutes a major change in the tourist experience."\[[5](#5)\], ComplexCity Lab is willing to make Tianzifang a successful sample in terms of "e-tourism" by taking full advantage of the available public data and serving for all participants. We are capable of managing data to optimize the attractiveness of Tianzifang and making better use of its "cultural and creative capital". The methodology is, implementing a community-wide solution (such as Tianzifang) and use it as a standard benchmark for further promotion.
+Specific applicable solutions include, from the experience applied in Paris, recycling the heat generated by shops, restaurants, and art studios as a byproduct for heating and supplying electricity for all residential buildings. With the extensive use of smart phone, all shops will receive text messages to remind them keep voice down after 10 pm. With the help of geographic-tracking apps, when tourists approach residential area, they will get text messages to remind them of the fact that people are living there, thus, they may need to change their behavior. Building digital map of Tianzifang with the option of picking up purchases at the tourists' preference stores or studios, to best avoid the trespass of residential area. 
+
+##<a name="appendix"></a>Appendix
+Legend of "Tianzifang": Yuan King of Song (531–517 BC) asked for paintings, so all the painters arrived to the palace. They stood aside after kowtowed and made their bow. After, they wet their painting brush and prepared the ink. However, half of them were laymen. There was one painter arrived late. He looked leisurely, and didn’t follow the royal rite to walk fast. He politely bowed but didn’t stand up, instead, he returned home immediately. The King sent the herald to check up on him, and found that he took off his coat, sat down with his legs crossed, lifted his sleeves, and was holding his painting brush. “Yes, he is the true great painter” said the King. (宋元君将画图，众史皆至，受揖而立，舐笔和墨，在外者半。有一史后至者，譠譠然不趋，受揖不立，因之舍。公使人视之，则解衣盘礴，裸袖握管。君曰：“可矣，是真画者也。” )
+
+
+##Bibliography
+1. <a name="1"></a>[Tianzifang](http://en.wikipedia.org/wiki/Tianzifang), Wikipedia.
+2. [Zhuangzi (庄子)](http://en.wikipedia.org/wiki/Zhuangzi_\(book\)), Wikipedia.
+3. <a name="3"></a>Shinohara, Hiroyuki. "Mutation of Tianzifang, Taikang Road, Shanghai". The 4th Conference of the [International Forum on Urbanism](http://newurbanquestion.ifou.org/proceedings/5%20The%20Transformation%20of%20Urban%20Form/poster%20papers/D039_Hiroyuki_Shinohara_Mutation%20of%20Tianzifang.pdf), Amsterdam/Delft, (2009): pp. 749-752.
+4. <a name="4"></a>Chilingerian, Jenna. "Engagement Through Arts". [CEOs for Cities](http://www.ceosforcities.org/blog/engagement-through-arts/), August 21, 2013.
+5. <a name="5"></a>Pellerin, Fleur, "France must become the world standard for e-tourism", [Paris Worldwide](http://issuu.com/omegaconseil/docs/adp_paris_world_wide), (May/June 2014): pp. 68-72.
+
+Photo: [TianZiFang II](http://www.flickr.com/photos/birgerhoppe/4729645791) by [Birger Hoppe](https://www.flickr.com/photos/birgerhoppe/) , licensed under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)

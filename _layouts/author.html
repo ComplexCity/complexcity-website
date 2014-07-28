@@ -38,7 +38,7 @@ Description:
           <li><a href="/about/">ABOUT</a></li>
           <li><a href="/projects/">PROJECTS</a></li>
           <li><a href="/studies/">STUDIES</a></li>
-          <li class="active">BLOG</li>
+          <li class="active"><a href="/blog/">BLOG</a></li>
         </ul>
       </nav>
       
@@ -100,34 +100,32 @@ Description:
 </script>
 
 		{% assign author = site.data.authors[page.author] %}
-
 		<div id="posts" class="clearfix">
-			<div>
+			<section id="author-head">
+				<h1>Author: {{author.display_name}}{% if page.author.chinese_name != '' %} ({{author.chinese_name}}){% endif %}</h1>
 				<div class="author-photo">
 					{% if author.description != '' %}
 						<img src="{{author.photo}}" class="avatar"/>
 					{% endif %}
 				</div>
 				<div class="author-about">
-					{{author.display_name}}{% if page.author.chinese_name != '' %} ({{author.chinese_name}}){% endif %}
 					<p>{% if author.description != '' %}{{author.description}}{% endif %}</p>
 				</div>
-
-			</div>
+			</section>
 
 		{% for post in site.posts %}
 			{% if post.author == page.author %}
-			<div>
+			<section>
 				<div class="col_50">
 					<img class="blog-img-full-size" alt="{{post.image_alt}}" src="{{ site.url }}{{post.image_small}}" />
 				</div>
 				<div class="col_50" style="margin-bottom:3em;">
 					<h2 style="margin-top:0.2em"><a href="{{ post.url }}" class="no-decoration">{{ post.title | upcase}}</a></h2>
-					<p class="thin">{{post.author.display_name}} &bull; {{post.date | date_to_string}}</p>
+					<p class="thin">{{author.display_name}} &bull; {{post.date | date_to_string}}</p>
 					{{ post.excerpt }}
 					<p><a href="{{ post.url }}">Read more…</a></p>					
 				</div>
-			</div>
+			</section>
 			{% endif %}
 		{% endfor %}
 		</div>

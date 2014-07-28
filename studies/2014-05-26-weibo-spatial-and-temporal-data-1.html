@@ -1,0 +1,432 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- meta name="viewport" content="width=device-width,initial-scale=1" -->
+  
+  <!-- the favicon -->
+  <!-- Opera Speed Dial Favicon -->
+  <link rel="icon" type="image/png" href="favicon/complexcity.png" />
+			
+  <!-- Standard Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon/complexcity.ico" />
+
+  <!-- For iPhone 4 Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/complexcity-retina.png" />
+
+  <!-- For iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/complexcity-ipad.png" />
+  
+  <!-- For iPhone: -->
+  <link rel="apple-touch-icon-precomposed" href="favicon/complexcity-iphone.png" />
+
+
+  <!-- the style -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="scripts/responsiveslides.min.js"></script>
+  <script src="scripts/complexcity.js"></script>
+  <title>ComplexCity Lab | The Blog</title>  
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  <!-- load everything for Mapbox -->
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js"></script>
+  <link href="https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css" rel="stylesheet" />
+	
+  <!-- the style -->
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <style>
+#map {
+	position:relative;
+	top:0;
+	bottom:0;
+	width:60%;
+	min-width:535px;
+	height:680px;
+}
+#barchart {
+	position:relative;
+	margin-top:40px;
+}
+
+.legend label,
+.legend span {
+	display:block;
+	float:left;
+	width:40px;
+	height:15px;
+	text-align:center;
+	font-family: 'Lucida Grande', sans-serif;
+	font-size:10px;
+}
+
+.legend label {
+	margin-bottom:10px;
+}
+.legend-title {
+	font-family: 'Lucida Grande', sans-serif;
+}
+
+.axis text {
+	font-size:10px;
+	fill:#404040;
+}
+.axis path,
+.axis line {
+	fill:none;
+	stroke:#404040;
+	shape-rendering:crispEdges;
+}
+
+#tip {
+	position:absolute;
+	line-height:1;
+	font-size:10px;
+	font-weight:bold;
+	padding:5px;
+	background:white;
+	border-bottom:1px solid #404040;
+	z-index:1;
+}
+
+/* Creates a small triangle extender for the tooltip */
+#tip:after {
+	position:absolute;
+  	bottom:-9px;
+  	left:0;
+	box-sizing:border-box;
+	display:inline;
+	font-size:9px;
+	width:100%;
+	line-height:1;
+	content:"\25BC";
+	text-align:center;
+}
+  </style>
+</head>
+
+<body>
+ <!--  <div class="container"> -->
+
+    <header class="header clearfix container">
+      <!-- logo goes here-->
+      <div class="logo">
+      	<a href="complexcity.org" alt="Complexcity Lab home" title="go home"><img src="images/logo-ComplexCity.svg" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" />
+	    </a>
+	  </div>
+      
+      <nav class="menu_main">
+        <ul>
+          <li><a href="index.php">The Lab</a></li>
+          <li><a href="#">Projects</a></li>
+          <li class="active"><a href="blog.php">Blog</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      
+      <!-- credit work in the top corner, image in css -->
+      <!--<div id="corner"></div>-->
+    </header>
+    
+    		<!-- the WHAT -->
+	
+    					<article class="article clearfix" style="padding-top:2em;">
+				<h1 class="col_100 thin center">Weibo spatial and temporal data</h1>
+
+				<p><img class="clearfix blog-img-full-size" alt="workers" src="http://www.complexcity.org/wp-content/uploads/2014/05/workers.png" alt="workers" /></p>
+
+<div class="blog-container">
+	<div id="legend" style='display:none'>
+		<strong class="legend-title">Number of messages</strong>
+		<nav class='legend clearfix'>
+			<span style='background:#f0f9e9'></span>
+			<span style='background:#ccecc7'></span>
+			<span style='background:#a8deb7'></span>
+			<span style='background:#7ecdc4'></span>
+			<span style='background:#4aa2c8'></span>
+			<span style='background:#1d67a9'></span>
+		</nav>
+		<nav class='legend cleafix'>
+			<label id="label1">≤ 800</label>
+			<label id="label2">> 800</label>
+			<label id="label3">> 1600</label>
+			<label id="label4">> 4500</label>
+			<label id="label5">> 6400</label>
+			<label id="label6">> 9600</label>
+		</nav>
+	</div>
+	<div id="layerLegend" style='display:none'>
+		<strong class="legend-title">Number of messages</strong>
+		<nav class='legend clearfix'>
+			<span style='background:#f0f9e9'></span>
+			<span style='background:#ccecc7'></span>
+			<span style='background:#a8deb7'></span>
+			<span style='background:#7ecdc4'></span>
+			<span style='background:#4aa2c8'></span>
+			<span style='background:#1d67a9'></span>
+		</nav>
+		<nav class='legend cleafix'>
+			<label id="label1">≤ 70</label>
+			<label id="label2">> 70</label>
+			<label id="label3">> 140</label>
+			<label id="label4">> 250</label>
+			<label id="label5">> 400</label>
+			<label id="label6">> 600</label>
+		</nav>
+	</div>
+	<div id="map"></div>
+	<div id="barchart">
+		<div id="tip" style='display:none'></div>
+	</div>
+<!-- load the data -->
+<script src="weibo.js"></script>
+
+<!-- load the d3.js library -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+	<script>
+	
+var map = L.mapbox.map('map', 'lpfaender.ic0cfbie')
+	.setView([31.2542, 121.4904], 11);
+
+map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+	
+var colors = ['#f0f9e9', '#ccecc7', '#a8deb7', '#7ecdc4', '#4aa2c8', '#1d67a9'],
+	barColorOut = '#4c5b68',
+	barColorOn = '#a7b7b6',
+	legendColor = '#404040';
+
+function getGlobalColor(value) {
+	if (value <= 800) {
+		return colors[0];
+	} else if (value <= 1600) {
+		return colors[1];
+	} else if (value <= 4500) {
+		return colors[2];
+	} else if (value <= 6400) {
+		return colors[3];
+	} else if (value <= 9600) {
+		return colors[4];
+	}
+	return colors[5];
+}
+
+function getColor(value) {
+	if (value <= 70) {
+		return colors[0];
+	} else if (value <= 140) {
+		return colors[1];
+	} else if (value <= 250) {
+		return colors[2];
+	} else if (value <= 400) {
+		return colors[3];
+	} else if (value <= 600) {
+		return colors[4];
+	}
+	return colors[5];
+}
+
+var circles = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
+for (var coord in weibo) {
+	latlng = coord.split(", ");
+	latlng[0] = parseFloat(latlng[0]);
+	latlng[1] = parseFloat(latlng[1]);
+	var count = 0;
+	for (var i=0; i < 24; i++) {
+		count += weibo[coord][i];
+		var circle_options = {
+			stroke: false,
+			fillColor: getColor(weibo[coord][i]),
+			fillOpacity: 0.5
+		};
+		circles[i].push(L.circle([latlng[0], latlng[1]], 2000, circle_options));
+	}
+	var circle_options = {
+		stroke: false,
+		fillColor: getGlobalColor(count),
+		fillOpacity: 0.6
+	};
+	circles[24].push(L.circle([latlng[0], latlng[1]], 2000, circle_options));
+}
+
+var currentLayer = 0;
+addLayer(24);
+
+function addLayer(i) {
+	for (var j=0; j < circles[i].length; j++) {
+		circles[i][j].addTo(map);
+	}
+	currentLayer = i;
+}
+
+function removeLayer(i) {
+	for (var j=0; j < circles[i].length; j++) {
+		map.removeLayer(circles[i][j]);
+	}
+}
+
+function showLayerLegend() {
+	map.legendControl.removeLegend(document.getElementById('legend').innerHTML);
+	map.legendControl.addLegend(document.getElementById('layerLegend').innerHTML);
+}
+
+function hideLayerLegend() {
+	map.legendControl.removeLegend(document.getElementById('layerLegend').innerHTML);
+	map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+}
+
+function showTip(count, top, left) {
+	d3.select('#tip')
+		.text(count)
+		.style('top', top + "px")
+		.style('left', left + "px")
+		.style('display', 'block');
+}
+
+function hideTip() {
+	d3.select('#tip')
+		.text("")
+		.style('display', 'none');
+}
+
+var nbMsgsByHour = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+for (var coord in weibo) {
+	for (var j=0; j < 24; j++) {
+		nbMsgsByHour[j] += weibo[coord][j];
+	}
+}
+var countMax = nbMsgsByHour[0];
+for (var i=1; i <24; i++) {
+	if (nbMsgsByHour[i] > countMax) {
+		countMax = nbMsgsByHour[i];
+	}
+}
+var barWidth = 20,
+	barsWidth = 24 * barWidth,
+	yAxisWidth = 55,
+	chartWidth = yAxisWidth + barsWidth;
+	
+var barMaxHeight = 100,
+	xAxisHeight = 15,
+	chartTitleHeight = 45,
+	chartHeight = barMaxHeight + xAxisHeight + chartTitleHeight;
+
+var barHeight = d3.scale.linear()
+	.domain([0, countMax])
+	.range([0, barMaxHeight]);
+	
+var chart = d3.select('#barchart').append('svg')
+	.attr('width', chartWidth)
+	.attr('height', chartHeight);
+
+var yAxis = d3.svg.axis()
+	.scale(d3.scale.linear()
+		.domain([0, countMax])
+		.range([barMaxHeight, 0]))
+	.orient('left')
+	.ticks(5);
+
+chart.append('g')
+	.attr('class', 'y axis')
+	.attr('width', yAxisWidth)
+	.attr('transform', "translate(45, 0)")
+	.call(yAxis);
+
+var bars = chart.append('g')
+	.attr('width', barsWidth)
+	.attr('transform', "translate(" + yAxisWidth + ", 0)");
+	
+var gEnter = bars.selectAll('g')
+	.data(nbMsgsByHour)
+	.enter().append('g')
+	.attr('transform', function(d,i){ return "translate(" + i * barWidth + ", 0)"; })
+	.attr('width', barWidth)
+	.attr('height', barMaxHeight + xAxisHeight);
+
+gEnter.append('rect')
+	.attr('x', 0)
+	.attr('y', function(d){ return barMaxHeight - barHeight(d); })
+	.attr('width', barWidth)
+	.attr('height', function(d){ return barHeight(d); })
+	.style('fill', barColorOut)
+	.style('stroke', 'white')
+	.style('stroke-width', 1)
+	.on('mouseover', function(d,i) {
+		d3.select(this).transition()
+			.duration(100)
+			.style('fill', barColorOn);
+		removeLayer(currentLayer);
+		addLayer(i);
+		showLayerLegend();
+		showTip(d, (barMaxHeight - barHeight(d) - 30), (yAxisWidth + i * barWidth - 13));
+	})
+	.on('mouseout', function(d,i){
+		d3.select(this).transition()
+			.duration(500)
+			.style('fill', barColorOut);
+		removeLayer(i);
+		addLayer(24);
+		hideLayerLegend();
+		hideTip();
+	});
+
+gEnter.append('text')
+	.attr('x', 0)
+	.attr('y', barMaxHeight + xAxisHeight)
+	.attr('width', barWidth)
+	.attr('height', xAxisHeight)
+	.style('fill', legendColor)
+	.style('font-size', '10px')
+	.text(function(d,i){ return i; });
+
+chart.append('text')
+	.attr('x', yAxisWidth)
+	.attr('y', chartHeight - 13)
+	.attr('width', barsWidth)
+	.style('fill', legendColor)
+	.style('font-size', '13px')
+	.style('font-weight', 'bold')
+	.style('text-align', 'center')
+	.text("Number of messages by hour of the day");
+	
+	</script>
+	
+<p>For the <a href="">Digital Eternity Project</a>, we queried the Weibo API during the period of Qing Ming festival. This traditional Chinese festival (清明节 Qīngmíng Jíe in Mandarin Chinese) also known as Ancestors’ Day held on April 5 this year. We collected about 245,000 messages created between April 1 and April 9  and localized in Shanghai. These messages aim to be analyzed for their content but they also represent a convenient dataset to explore the variation of the number of messages posted along the day across the city.</p>
+<p>Therefore, based on the creation date of these messages, we could make the bar chart of the bottom portion, showing the number of messages per hour of the day.</p>
+<p>As the messages are also localized, we could position them on a map of Shanghai to compare the activity registered in the different areas. Thus, we re-created a tessellation made with 4 km diameter cells centered on the 85 locations used to query the Weibo API. Each message was counted in the cell whose center was the closest to its GPS location. The top portion shows the resulting map without regard to their creation time.</p>
+<p>Then we can combine these two informations, namely location and time, to explore the variation of activity in the various areas along the day. To see the localized activity along the day, you can mouse over the bars of the bar chart and the map will update according to the hour. It would have been as easy to create an animation that would play the 24 maps but we found that it was more exploration oriented to be able to play at will the differences between successive hours.</p>
+<p>This visualization is built on two JavaScript libraries: <a href="http://d3js.org">D3.js</a> for the bar chart and <a href="http://mapbox.com">Mapbox.js</a> for the maps. To learn more about how all the code works, a tutorial is available at <a href="http://www.complexcity.org/blog.php?">www.complexicity.org/blog</a>.</p>
+</div>
+				<div class="blog-container clearfix">
+				<span class="thin">Published on 26 mai 2014 &bull; <a href="http://www.complexcity.org/blog.php?n=identity-of-chinese-cities&#038;id=178" rel="bookmark" title="Permanent Link to Identity of Chinese cities">Identity of Chinese cities</a></span>
+				</div>
+					</article>
+    </div>
+    <div class="before-footer center clearfix">
+    </div>
+    <footer class="footer clearfix grey">
+     <article class="article clearfix">
+      <div class="col_100 center clearfix">
+      <p class="thin">
+      Complexcity Lab is a collaboration between french Université de Technologie Group and Shanghai University
+      </p>
+      	<!-- the official credit -->
+      	<!-- put your many logos here to credit your great institutions and comrades -->
+        <a href="http://interactions.utc.fr/Le-Groupe-UT-avance-en-reseau" alt="UT Group" title="UT Group" class="col_50 center"><img class="img-logo" src="images/logo-3UT.svg" /></a>
+        <a href="utseus.com" alt="Utseus homepage" title="Be A Visionary, Join Us" class="col_50 center"><img class="img-logo" src="images/logo-SHU-black-SD.png" /></a>
+        </div>
+    
+      <div class="thin small col_50">
+	  	<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ComplexCity Laboratory website</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.complexcity.org" property="cc:attributionName" rel="cc:attributionURL">ComplexCity Laboratory</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a></p>
+	  	<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>This website code is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a></p>
+      </div>
+      </article>
+     
+    </footer>
+      <!-- </div> -->
+</body>
+</html>

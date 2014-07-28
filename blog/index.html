@@ -98,24 +98,20 @@ Description:
 			});
 		});
 })();
-
-
 </script>
+
 		<div id="posts" class="clearfix">
 		{% for post in site.posts %}
 			{% assign author = site.data.authors[post.author] %}
-			<div>
-				<div class="col_50">
-					<img class="blog-img-full-size" alt="{{post.image_alt}}" src="{{ site.url }}{{post.image_small}}" />
-				</div>
-				<div class="col_50" style="margin-bottom:3em;">
-					<h2 style="margin-top:0.2em"><a href="{{ post.url }}" class="no-decoration">{{ post.title | upcase}}</a></h2>
-					<p class="thin">{{author.display_name}} &bull; {{post.date | date_to_string}}</p>
+			<article style="margin-bottom:4em">
+				<p><img class="blog-img-full-size" alt="{{post.image_alt}}" src="{{ site.url }}{{post.image_big}}" /></p>
+				<h2 style="margin-top:0.2em"><a href="{{ post.url }}" class="no-decoration">{{ post.title | upcase}}</a></h2>
+				<p class="thin"><a href="/authors/{{author.link}}/" title="Posts by {{author.display_name}}" class="underline-hover">{{author.display_name}}</a> &bull; {{post.date | date_to_string}}</p>
 					{{ post.excerpt }}
-					<p><a href="{{ post.url }}">Read more…</a></p>					
-				</div>
-			</div>
+				<p><a href="{{ post.url }}">Read more…</a></p>
+			</article>
 		{% endfor %}
 		</div>
-    
+		
+
 {% include footer.html %}

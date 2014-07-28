@@ -1,19 +1,18 @@
 Fabien:
-  photo: /assets/fabien.jpg
+  photo: /assets/authors/fabien.jpg
   display_name: Fabien Pfaender
   chinese_name: 方骏祥
   github: fpfaende
   description: Fabien is a data scientist, visualization researcher and city enthousiast. He loves programming things as much as exploring Humanities. When not reading weird fantasy or Sci-Fi novel, he embraces the vibrant life of Shanghai.
   link: fabien-pfaender
 Hao:
-  photo: /assets/hao.jpg
+  photo: /assets/authors/hao.jpg
   display_name: Zhang Hao
   chinese_name: 张昊
   description: Hao is a research engineer in urbanism.
   link: hao-zhang
 Laetitia:
-  photo: /assets/laetitia.jpg
+  photo: /assets/authors/laetitia.jpg
   display_name: Laëtitia Pfaender
-  chinese_name: 
   description: Laëtitia is a research engineer in computer science.
   link: laetitia-pfaender

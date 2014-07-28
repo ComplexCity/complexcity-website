@@ -16,7 +16,11 @@
 
   <!-- the style -->
   <link rel="stylesheet" href="/css/style.css" />
-  
+
+  {% if page.code_content %}
+  <link rel="stylesheet" href="/css/syntax.css" />
+	{% endif %}
+	
   <!-- the scripts -->
   <script src="/scripts/jquery-1.11.1.min.js"></script>
   <script src="/scripts/responsiveslides.min.js"></script>

@@ -2,8 +2,8 @@
 layout: post
 title: "Identity of Chinese cities"
 author: Hao
-image_big: /assets/identity-of-chinese-cities.png
-image_small: /assets/identity-of-chinese-cities-square.png
+image_big: /assets/identity-of-chinese-cities/big.png
+image_small: /assets/identity-of-chinese-cities/square.png
 image_alt: workers on a construction site
 comments: true
 keywords:
@@ -43,7 +43,7 @@ CEOs for Cities \[[13](#13)\] argues that:
 If Chinese cities are willing to achieve their ambitions and be highly competitive and attractive in the 21st century, it is essential to keep their own unique characteristics, engage people’s emotions and bring people a new whole experience about the city they live and work in by reviving urban identity. After all, the only way to mark the city in the trend of globalization is to effectively nourish and promote the particularity of city.
 
 
-###Bibliography
+##Bibliography
 
 
 1. <a name="1"></a>Bell, Daniel A., and Avner De-Shalit. *The spirit of cities: Why the identity of a city matters in a global age*. Princeton University Press, 2011. (see it on [GoodReads][1])

@@ -43,7 +43,7 @@
 
 	<article class="article clearfix" style="padding-top:3em;">
 		<h1 class="col_100 thin center"> {{page.title}} </h1>
-		<p class="thin center">By {{author.display_name}}{% if author.chinese_name != '' %} ({{author.chinese_name}}){% endif %} on {{ page.date | date_to_string }}</p>
+		<p class="thin center">By <a href="/authors/{{author.link}}/" title="Posts by {{author.display_name}}" class="underline-hover">{{author.display_name}}{% if author.chinese_name != '' %} ({{author.chinese_name}}){% endif %}</a> on {{ page.date | date_to_string }}</p>
 		<p><img class="clearfix blog-img-full-size" alt="{{page.image_alt}}" src="{{page.image_big}}" /></p>
 		<div class="blog-container">
 			{{ content }}
