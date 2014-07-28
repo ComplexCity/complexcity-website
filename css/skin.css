@@ -548,6 +548,12 @@ a.underline-hover:hover {
 	margin-bottom:0.2em
 }
 
+.post-img {
+	width:48%;
+	margin-left:2em;
+	float:right;
+}
+
 @media only screen and (max-width:480px) { /* Smartphone custom styles */
   .header:before,
   .hero:before,
