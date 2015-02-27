@@ -11,26 +11,17 @@ Name: about
       <div class="logo">
       	<a href="/" alt="Complexcity Lab home" title="go home">
       		<img src="{{ site.url }}/images/logo-ComplexCity.svg" onerror="this.onerror=null; this.src='{{ site.url }}/images//logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
-	    	</a>
 	  	</div>
 	  
 	  	<!-- the SOCIAL links -->
 	  	<div id="social">
-	  			<a href="https://github.com/ComplexCity/" title="our github repository" target="_blank">
-						<img src="{{ site.url }}/images/follow-us-github.png" onmouseover="this.src='{{ site.url }}/images/follow-us-github-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-github.png'" /></a>
-					<a href="https://speakerdeck.com/complexcity" title="our presentations on speakerdeck" target="_blank">
-						<img src="{{ site.url }}/images/follow-us-speakerdeck.png" onmouseover="this.src='{{ site.url }}/images/follow-us-speakerdeck-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-speakerdeck.png'" /></a>
-					<a href="http://twitter.com/complexcity_lab" title="our twitter account" target="_blank">
-						<img src="{{ site.url }}/images/follow-us-twitter.png" onmouseover="this.src='{{ site.url }}/images/follow-us-twitter-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-twitter.png'"/></a>
-					<a href="http://www.weibo.com/complexcity" title="our weibo account" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-weibo.png" onmouseover="this.src='{{ site.url }}/images/follow-us-weibo-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-weibo.png'"/></a>
-					<a href="/blog/feed.xml" title="ComplexCity Lab's Blog RSS feed" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-syndication.png" onmouseover="this.src='{{ site.url }}/images/follow-us-syndication-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-syndication.png'"/></a>
-					<a href="https://pinboard.in/u:shangdaemon/public/" title="our web links" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-pinboard.png" onmouseover="this.src='{{ site.url }}/images/follow-us-pinboard-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-pinboard.png'"/></a>
-					<a href="https://www.goodreads.com/review/list/32004943?shelf=read" title="the books we like" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-goodreads.png" onmouseover="this.src='{{ site.url }}/images/follow-us-goodreads-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-goodreads.png'"/></a>
-			</div>
+	  		{% for item in site.data.social %}
+	  	  		<a href="{{ item.link }}" title="{{ item.title }}" target="_blank">
+				<img src="{{ site.url }}/{{ item.image }}" 
+					onmouseover="this.src='{{ site.url }}/{{ item.image-hover }}'" 
+					onmouseout="this.src='{{ site.url }}/{{ item.image }}'" /></a>
+			{% endfor %}
+		</div>
       
       <!--the MENU -->
       <nav class="menu_main">
@@ -47,9 +38,9 @@ Name: about
     <div class="grey" style="border-bottom:1px solid #ccc;">
     	<!-- the PunchLine -->
     	<article class="hero clearfix center punchline">
-        	<div class="col_100 right small center" style="top:-1em;position:relative;font-family: Lato, 'Helvetica Neue', sans-serif;color:rgb(70,70,70);text-shadow: rgb(255, 255, 255) 0px 1px 0px;">
+        	<div class="col_100 right small center" style="top:-1.5em;position:relative;color:rgb(70,70,70);text-decoration: none;">
 				<!-- Picture Attribution for Licenced work-->
-				<a style="text-decoration: none;" href="http://creativecommons.org/licenses/by-sa/2.0/">cc by-nc-sa</a><a href="http://www.flickr.com/photos/stuckincustoms/8242941446/" style="text-decoration: none;">, photo by stuckincustoms</a>
+				<p>Photo: <a href="https://www.flickr.com/photos/stuckincustoms/8242941446/">The Hypercity of Shanghai</a> by <a href="https://www.flickr.com/photos/stuckincustoms/">Trey Ratcliff</a> , licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY NC SA 2.0</a></p>
 			</div>
 		</article>
 
@@ -94,9 +85,10 @@ Name: about
 					<script type='text/javascript'>
 						var map = L.mapbox.map('map', 'shangdaemon.map-glhkh389');
 					</script>
-					<p>Shanghai University, Baoshan Campus,<br/>99 Shangda Road, Building E, Room 600, Shanghai<br />
-					宝山区上大路99号, 上海大学宝山校区, E楼600室 <br />
-					<a href="/about/taxi.html" target="_blank">Taxi Printout</a></p>
+					<p><strong>CN</strong> — Shanghai University, Baoshan Campus,<br/>99 Shangda Road, Building E, Room 600, Shanghai<br />
+					宝山区上大路99号, 上海大学宝山校区, E楼600室 (<a href="/about/taxi.html" target="_blank">Taxi Printout</a>)<br />
+					<strong>FR</strong> — IMI, 62 Boulevard de Sébastopol, Paris
+					</p>
 				</div>
 			</div>
 		</article>
@@ -108,51 +100,43 @@ Name: about
 			<!--<h1>ComplexCity</h1>-->
 			<p class="small thin" style="margin-bottom:1em">FOLLOW US OR CONTACT US ON</p>
 			<a href="https://github.com/ComplexCity/" title="our github repository" target="_blank">
-				<img class="follow-us" src="{{ site.url }}/images/follow-us-github.png" onmouseover="this.src='{{ site.url }}/images/follow-us-github-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-github.png'" /></a>
+				<img class="follow-us" src="{{ site.url }}/images/follow-us/follow-us-github.png" onmouseover="this.src='{{ site.url }}/images/follow-us/follow-us-github-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us/follow-us-github.png'" /></a>
 			<a href="https://speakerdeck.com/complexcity" title="our presentations on speakerdeck" style="margin-left:1em;" target="_blank">
-				<img class="follow-us" src="{{ site.url }}/images/follow-us-speakerdeck.png" onmouseover="this.src='{{ site.url }}/images/follow-us-speakerdeck-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-speakerdeck.png'" /></a>
+				<img class="follow-us" src="{{ site.url }}/images/follow-us/follow-us-speakerdeck.png" onmouseover="this.src='{{ site.url }}/images/follow-us/follow-us-speakerdeck-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us/follow-us-speakerdeck.png'" /></a>
 			<a href="http://twitter.com/complexcity_lab" title="our twitter account" style="margin-left:1em;" target="_blank">
-				<img class="follow-us" src="{{ site.url }}/images/follow-us-twitter.png" onmouseover="this.src='{{ site.url }}/images/follow-us-twitter-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-twitter.png'"/></a>
+				<img class="follow-us" src="{{ site.url }}/images/follow-us/follow-us-twitter.png" onmouseover="this.src='{{ site.url }}/images/follow-us/follow-us-twitter-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us/follow-us-twitter.png'"/></a>
 			<a href="http://www.weibo.com/complexcity" title="our weibo account" style="margin-left:1em;" target=_blank>
-				<img class="follow-us"  src="{{ site.url }}/images/follow-us-weibo.png" onmouseover="this.src='{{ site.url }}/images/follow-us-weibo-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-weibo.png'"/></a>
+				<img class="follow-us"  src="{{ site.url }}/images/follow-us/follow-us-weibo.png" onmouseover="this.src='{{ site.url }}/images/follow-us/follow-us-weibo-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us/follow-us-weibo.png'"/></a>
 			<a href="https://www.linkedin.com/company/complexcity-lab" title="ComplexCity Linkedin page" style="margin-left:1em;" target=_blank>
-				<img class="follow-us"  src="{{ site.url }}/images/follow-us-linkedin.png" onmouseover="this.src='{{ site.url }}/images/follow-us-linkedin-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-linkedin.png'"/></a>
+				<img class="follow-us"  src="{{ site.url }}/images/follow-us/follow-us-linkedin.png" onmouseover="this.src='{{ site.url }}/images/follow-us/follow-us-linkedin-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us/follow-us-linkedin.png'"/></a>
 			<a href="/blog/feed.xml" title="ComplexCity" style="margin-left:1em;" target=_blank>
-				<img class="follow-us"  src="{{ site.url }}/images/follow-us-syndication.png" onmouseover="this.src='{{ site.url }}/images/follow-us-syndication-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-syndication.png'"/></a>
+				<img class="follow-us"  src="{{ site.url }}/images/follow-us/follow-us-syndication.png" onmouseover="this.src='{{ site.url }}/images/follow-us/follow-us-syndication-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us/follow-us-syndication.png'"/></a>
 			<a href="https://pinboard.in/u:shangdaemon/public/" title="our web links" style="margin-left:1em;" target=_blank>
-				<img class="follow-us"  src="{{ site.url }}/images/follow-us-pinboard.png" onmouseover="this.src='{{ site.url }}/images/follow-us-pinboard-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-pinboard.png'"/></a>
+				<img class="follow-us"  src="{{ site.url }}/images/follow-us/follow-us-pinboard.png" onmouseover="this.src='{{ site.url }}/images/follow-us/follow-us-pinboard-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us/follow-us-pinboard.png'"/></a>
 			<a href="https://www.goodreads.com/review/list/32004943?shelf=read" title="the books we like" style="margin-left:1em;" target=_blank>
-				<img class="follow-us"  src="{{ site.url }}/images/follow-us-goodreads.png" onmouseover="this.src='{{ site.url }}/images/follow-us-goodreads-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-goodreads.png'"/></a>
+				<img class="follow-us"  src="{{ site.url }}/images/follow-us/follow-us-goodreads.png" onmouseover="this.src='{{ site.url }}/images/follow-us/follow-us-goodreads-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us/follow-us-goodreads.png'"/></a>
 			<a href="mailto:fabienDOTpfaenderATutseusDOTcom?subject=ComplexCity%20Lab%20Contact&body=REPLACE%20DOT%20AND%20AT%20IN%20THE%20MAIL%20ADDRESS%20WITH%20THEIR%20CHARACTERS%20EQUIVALENT" title="email us right away" style="margin-left:1em;">
-				<img class="follow-us"  src="{{ site.url }}/images/follow-us-email.png" onmouseover="this.src='{{ site.url }}/images/follow-us-email-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-email.png'"/></a>
+				<img class="follow-us"  src="{{ site.url }}/images/follow-us/follow-us-email.png" onmouseover="this.src='{{ site.url }}/images/follow-us/follow-us-email-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us/follow-us-email.png'"/></a>
 			<a href="{{ site.url }}/images/labo-phone.png" class="fancybox" title="Give us a call" style="margin-left:1em;" target=_blank>
-				<img class="follow-us"  src="{{ site.url }}/images/follow-us-phone.png" onmouseover="this.src='{{ site.url }}/images/follow-us-phone-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-phone.png'"/></a>
+				<img class="follow-us"  src="{{ site.url }}/images/follow-us/follow-us-phone.png" onmouseover="this.src='{{ site.url }}/images/follow-us/follow-us-phone-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us/follow-us-phone.png'"/></a>
 		</div>
 	</article>
       
     <!-- the MAIN CONTENT -->
-	<article class="article clearfix" style="padding-top:0em;">
-    	<h1 class="thin center">A Comprehensive Team</h1>
-    	<div class="container">
-	    	<p>ComplexCity hosts 16 interdisciplinary research projects on cities which have at least one French and one Chinese researcher. In addition to these projects we are developing a conceptual framework aimed at creating a science of cities. </p>
-	    	<div class="col_50">
-	    		<ol>
-			    	<li>We develop strategies and a platform for <span class="importantNews">large scale dynamic heterogenous urban data capture</span> (including traditional non digital data) and data high performance / high availability storage. We design simple end-point so that scientist from various disciplines can use them as simply as possible. This makes quantitative and qualitative data available to all our researchers and partners</li>
-					<li>We <span class="importantNews">explore massive urban data</span> using a wide range of data science techniques: machine learning (supervised and unsupervised classification), probabilist methods, design methodologies, 3D modeling,  geographic and information visualization, language processing, serious gaming. We create methods and tools to be used by all lab partners.</li>
-					<li>We use the result of the two previous step to <span class="importantNews">study complex interdisciplinary issues in the city</span>: citizen health awareness, building of a smart green creative sustainable and lovable city, improving car traffic/walking conditions, modelization of places behaviors and characteristics, smart cctv use for security, livability and mobility.</li>
-					<li>We <span class="importantNews">design online city services and serious games</span> for citizens, companies and government based on our multi-layered data for them to explore, know better, and improve policies of their city. It also help in return crowd source urban data.</li>
-					</ol>
-				</div>
-	    	<div class="col_50">
-				<ul class="rslides">
-					 <li><img src="{{ site.url }}/images/slideshow/laptop-slideshow1.png" alt=""></li>
-					 <li><img src="{{ site.url }}/images/slideshow/laptop-slideshow2.png" alt=""></li>
-					 <li><img src="{{ site.url }}/images/slideshow/laptop-slideshow3.png" alt=""></li>
-					 <li><img src="{{ site.url }}/images/slideshow/laptop-slideshow4.png" alt=""></li>
-					 <li><img src="{{ site.url }}/images/slideshow/laptop-slideshow5.png" alt=""></li>
-					 <li><img src="{{ site.url }}/images/slideshow/laptop-slideshow6.png" alt=""></li>
-				</ul>
-	    	</div>
-    	</div>
+	<article class="article clearfix container" style="padding-top:0em;">
+    	<h1 class="thin center">Our Process</h1>
+		<ul class="about">
+	    	<li><span class="step-about alternate bigger">1</span>We develop strategies and a platform for <span class="importantNews"><strong>large scale dynamic heterogenous urban data capture</strong></span> (including traditional non digital data) and data high performance / high availability storage. We design simple end-point so that scientist from various disciplines can use them as simply as possible. This makes quantitative and qualitative data available to all our researchers and partners</li>
+			<li><span class="step-about alternate bigger">2</span>We <span class="importantNews"><strong>explore massive urban data</strong></span> using a wide range of data science techniques: machine learning (supervised and unsupervised classification), probabilist methods, design methodologies, 3D modeling,  geographic and information visualization, language processing, serious gaming. We create methods and tools to be used by all lab partners.</li>
+			<li><span class="step-about alternate bigger">3</span>We use the result of the two previous step to <span class="importantNews"><strong>study complex interdisciplinary issues in the city</strong></span>: citizen health awareness, building of a smart green creative sustainable and lovable city, improving car traffic/walking conditions, modelization of places behaviors and characteristics, smart cctv use for security, livability and mobility.</li>
+			<li><span class="step-about alternate bigger">4</span>We <span class="importantNews"><strong>design online city services and serious games</strong></span> for citizens, companies and government based on our multi-layered data for them to explore, know better, and improve policies of their city. It also help in return crowd source urban data.</li>
+		</ul>
+    	<h1 class="thin center">Frequently Asked Questions</h1>
+		<ul class="about">
+		{% for item in site.data.faq %}
+			<li class="question"><span class="step-about bigger">Q</span><strong>{{item.question}}</strong></li>
+			<li class="answer">{{item.answer | markdownify}}</li>
+		{% endfor %}
+		</ul>
 	</article>
 {% include footer.html %}

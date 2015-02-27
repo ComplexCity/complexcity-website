@@ -1,3 +1,9 @@
-url: http://localhost:4000
+url: http://www.complexcity.org
 
 searchindex: yes
+
+markdown:      kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+show_drafts: false
+
+relative_permalinks: false

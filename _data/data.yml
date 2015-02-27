@@ -1,0 +1,169 @@
+--- 
+- 
+  capture_type: "mixed (scraping + API)"
+  cities: Shanghai
+  count: 350k
+  dataset_precision: Complete
+  description: "List of venues categorized with price and ratings"
+  source: www.dianping.com
+  spatial_precision: "GPS coordinate"
+  status: done
+  temporal_precision: "yearly capture"
+  title: "chinese venues"
+  type: venues
+- 
+  capture_type: API
+  cities: "Shanghai, Paris"
+  count: pending
+  dataset_precision: "few at a time"
+  description: "List of venues categorized with ratings"
+  source: www.foursquare.com
+  spatial_precision: "GPS coordinate"
+  status: paused
+  temporal_precision: "continuous capture"
+  title: "foursquare venues"
+  type: venues
+- 
+  capture_type: API
+  cities: Paris
+  count: pending
+  dataset_precision: "few at a time"
+  description: "List of venues categorized with ratings"
+  source: www.yelp.com
+  spatial_precision: "GPS coordinate"
+  status: paused
+  temporal_precision: "continuous capture"
+  title: "yelp venues"
+  type: venues
+- 
+  capture_type: API
+  cities: Shanghai
+  count: "2 millions"
+  dataset_precision: "few at a time"
+  description: "Sina Weibo microblog message send from within Shanghai"
+  source: www.weibo.com
+  spatial_precision: "GPS coordinate"
+  status: pending
+  temporal_precision: "continuous capture"
+  title: "in-City weibo messages"
+  type: "social network"
+- 
+  capture_type: API
+  cities: "Shanghai, Paris, Beijing, Tokyo, NYC, London"
+  count: 400k
+  dataset_precision: "few at a time"
+  description: "photos taken inside cities with tags but not the picture itself"
+  source: www.flickr.com
+  spatial_precision: "GPS coordinate"
+  status: paused
+  temporal_precision: "continuous capture"
+  title: "flick photos"
+  type: "social network"
+- 
+  capture_type: scraping
+  cities: "Shanghai, Paris, Beijing, NYC"
+  count: pending
+  dataset_precision: "few at a time"
+  description: "Air Quality index with pm25, PM10 and other pollution indicators"
+  source: www.aqicn.org
+  spatial_precision: "city wide"
+  status: paused
+  temporal_precision: "continuous capture"
+  title: "Air Quality Index"
+  type: weather
+- 
+  capture_type: API
+  cities: "Shanghai, Paris"
+  count: pending
+  dataset_precision: "few at a time"
+  description: "List of venues categorized with ratings"
+  source: www.yahooweather.com
+  spatial_precision: "city wide"
+  status: paused
+  temporal_precision: "continuous capture"
+  title: "weather information"
+  type: weather
+- 
+  capture_type: scraping
+  cities: world
+  count: pending
+  dataset_precision: complete
+  description: "List of remarkable buildings published on archdaily from architecture firms"
+  source: www.archdaily.com
+  spatial_precision: "city wide"
+  status: paused
+  temporal_precision: "daily capture"
+  title: "new building creation"
+  type: architecture
+- 
+  capture_type: API
+  cities: "Shanghai, Paris"
+  count: "3 millions"
+  dataset_precision: complete
+  description: "List of github users locations"
+  source: www.github.com
+  spatial_precision: "city wide"
+  status: paused
+  temporal_precision: "continuous capture"
+  title: github
+  type: "social network"
+- 
+  capture_type: dataset
+  cities: "Shanghai, France"
+  count: millions
+  dataset_precision: complete
+  description: "roads in graph format with geographic polyline"
+  source: www.openstreetmap.com
+  spatial_precision: "GPS coordinate"
+  status: running
+  temporal_precision: monthly
+  title: roads
+  type: transportation
+- 
+  capture_type: "scraping, API, dataset"
+  cities: "Shanghai, Paris"
+  count: 20k
+  dataset_precision: complete
+  description: "bus lines in a graph format with geographic polyline"
+  source: "www.baidu.com, RATP app"
+  spatial_precision: "GPS coordinate"
+  status: complete
+  temporal_precision: yearly
+  title: "bus lines"
+  type: transportation
+- 
+  capture_type: datasets
+  cities: "Shanghai, Paris"
+  count: 2k
+  dataset_precision: complete
+  description: "subway lines in a graph format with geographic polyline"
+  source: "www.openstreetmap.com, RATP app, Shanghai Metro App"
+  spatial_precision: "GPS coordinate"
+  status: running
+  temporal_precision: yearly
+  title: "subway lines"
+  type: transportation
+- 
+  capture_type: scraping
+  cities: "Shanghai, Paris"
+  count: 125k
+  dataset_precision: "few at a time"
+  description: "prices per square meter for locations"
+  source: "www.anjuke.com, meilleursagents.com"
+  spatial_precision: "GPS coordinate"
+  status: running
+  temporal_precision: "continuous capture"
+  title: "real estate"
+  type: "real estate"
+- 
+  capture_type: dataset
+  cities: World
+  count: pending
+  dataset_precision: complete
+  description: "list of cities mentionned in english books"
+  source: www.gutenberg.org
+  spatial_precision: "city wide"
+  status: running
+  temporal_precision: yearly
+  title: "cities in books"
+  type: culture

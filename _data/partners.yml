@@ -1,0 +1,65 @@
+SHU:
+  fullname: Shanghai University
+  website: http://www.shu.edu.cn
+  type: university
+  image: SHU
+UTBM:
+  fullname: Université de Technologie de Belfort-Montbéliard
+  website: http://www.utbm.fr
+  type: university
+  image: UTBM
+UTC:
+  fullname: Université de Technologie de Compiègne
+  website: http://www.utc.fr
+  type: university
+  image: UTC
+UTT:
+  fullname: Université de Technologie de Troyes
+  website: http://www.utt.fr
+  type: university
+  image: UTT
+Xerox:
+  fullname: Xerox Research Center europe
+  website: http://xrce.xerox.com/
+  type: industry
+  image: industry
+CoData:
+  fullname: CoData France
+  website: http://codata-france.org/
+  type: industry
+  image: industry
+ESADSE: 
+  fullname: CoData France
+  website: http://codata-france.org/
+  type: university
+  image: university
+ECNU:
+  fullname: CoData France
+  website: http://codata-france.org/
+  type: university
+  image: university
+Gobelins:
+  fullname: CoData France
+  website: http://codata-france.org/
+  type: university
+  image: university
+SIVECO:
+  fullname: CoData France
+  website: http://codata-france.org/
+  type: industry
+  image: industry
+Linkfluence:
+  fullname: Linkfluence
+  website: http://www.linkfluence.fr
+  type: industry
+  image: industry
+Dassault:
+  fullname: Dassault Systèmes
+  website: http://www.3ds.com/
+  type: industry
+  image: industry
+Paris3:
+  fullname: Université Sorbonne Nouvelle - Paris 3
+  website: http://www.univ-paris3.fr/
+  type: university
+  image: university

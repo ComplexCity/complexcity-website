@@ -50,12 +50,13 @@ body {
   color:#000;
   background:white;
   height:100%;
-  text-shadow: #ffffff 0px 1px 0px;
+  text-shadow:none;
+/*   text-shadow: #ffffff 0px 1px 0px; */
 }
 
 a { color:#000; }
 a:hover { color:#666; }
-a:visited { color:#444; }
+a:visited { color:#434343; }
 
 ul li, ol li {
   padding:0 0 0.4em 0;
@@ -182,6 +183,17 @@ a.no-decoration {
   cursor:default;
 }
 
+.menu_partners {
+  margin:auto
+  max-width: 800px;
+  text-align:center;
+}
+
+.menu_partners li {
+  display:inline-block;
+  padding:1em 1em 0 1em;
+}
+
 #social {
 	width:100%;
 	text-align:right;
@@ -215,9 +227,9 @@ text-decoration:  overline;
 
 
 .hero {
-	text-shadow: none ;
+  text-shadow: none;
   background:rgb(48,41,43);
-/*   background-image: url("http://farm9.staticflickr.com/8483/8242941446_f0ae7c1d1d_h.jpg"); */
+  background-image: url("../images/headline.jpg");
   background-position: center center;
   background-position-y: -480px;
   background-repeat: no-repeat;
@@ -244,6 +256,19 @@ border-top:1px solid #c8c8c8;
   z-index:-1;
   
 }
+
+.heroine {
+	color:white;
+	font-variant: small-caps;
+	font-size:4.5em;
+	margin:0;
+	background-image:url("../images/headline-gradient3.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size:auto auto;
+	
+}
+
 
 .info {
   padding:0 0 2.5em 0;
@@ -338,7 +363,7 @@ border-top:1px solid #c8c8c8;
 
 .hero p a{
 	font-size:10px;
-  font-weight: 100;
+  font-weight: 300;
   color:#000000;
   text-decoration: none;
 }
@@ -669,7 +694,7 @@ img.twitter {
   overflow: hidden;
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: auto;
   }
 
 .rslides li {
@@ -697,7 +722,45 @@ img.twitter {
 
 blockquote {
 	font-style: italic;
-	
+}
+
+.italic {
+	font-style: italic;
+}
+
+.studies-and-projects-box {
+   display: -ms-flexbox; 
+   -ms-box-orient: horizontal;
+   -ms-flex-direction: row;
+   -ms-flex-pack: start;
+   -ms-flex-wrap: wrap;
+   display: flex; 
+   display: -webkit-flex; 
+   display: -moz-flex; 
+   display: -ms-flex; 
+
+   flex-direction: row; 
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   -webkit-flex-wrap: wrap;
+	padding: .5vw;
+}
+
+.studies-and-projects-item {
+	width:232px;
+	height:auto;
+	margin: .5vw; 
+	border: 0px solid silver;
+}
+
+.studies-and-projects-item img {
+	width:232px;
+}
+
+@media screen and (max-width: 400px) {
+  .studies-and-projects-item { margin: 0; }
+  .studies-and-projects-box { padding: 0; }
+  
 }
 
 #blog-thumbnail {
@@ -709,6 +772,7 @@ img.blog-img-full-size {
 	width:100%;
 	height:auto;
 }
+
 
 ul.projects li{
 	list-style-type: none;
@@ -729,11 +793,41 @@ ul.projects li{
 	min-height: 110px;
 }
 
+ul.project-institutions-list {
+	list-style-type:none;
+	margin:0em;
+	padding: 0em;
+}
+
+ul.project-institutions-list li{
+	display:inline-block;
+	margin:0 0 0 0.5em;
+}
+
+ul.project-institutions-list a{
+	text-decoration: none;
+	width:100%;
+}
+
+ul.project-institutions-list img{
+	width:50px;
+	height:auto;
+}
+
+ul.project-institutions-list span {
+	text-align: center;
+	display: block;
+}
 
 ul.projects a{
 	text-decoration: none;
+	text-align: center;
+	display:block;
 }
 
+.blog-link-decoration a {
+	text-decoration: none;
+}
 
 ul.projects h2{margin-bottom: 0.2em}
 
@@ -882,4 +976,76 @@ a.author {
 a.author:hover {
 	text-decoration:underline;
 }
+
+span.step {
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: black;
+  display: inline-block;
+  line-height: 1.6em;
+  margin-right: 1em;
+  text-align: center;
+  width: 1.6em; 
+  background:rgb(142,188,220);
+}
+
+span.bigger {
+	font-size: 1.2em;
+}
+
+span.step-about{
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: black;
+  display: inline-block;
+  line-height: 1.6em;
+  margin-right: 1em;
+  text-align: center;
+  width: 1.6em; 
+  background:#e1e1e1;
+}
+
+span.alternate{
+  background:white;
+  border:1px solid #626262;
+}
+
+ul.about, ol.about {
+	list-style-type:none;
+	font-size:1.1em;
+	margin-top:0em;
+}
+
+ul.about li, ol.about li{
+	margin-top:1em;
+	margin-bottom:1em;
+}
+
+ul.about li.question{
+	margin-top:1em;
+	margin-bottom:0em;
+}
+
+ul.about li.answer {
+	margin-top:0em;
+	margin-bottom:1em;
+}
+
+
+ul.about li.answer p{
+	margin:0;
+}
+
+ul.main-data{
+	list-style-type:none;
+	padding-left:4em;
+	font-size:1.1em;
+	margin-top:0em;
+}
+ul.main-data li{
+	margin-top:0.2em;
+}
+
 

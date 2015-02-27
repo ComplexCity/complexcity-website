@@ -6,26 +6,17 @@
       <div class="logo">
       	<a href="{{ site.url }}" alt="Complexcity Lab home" title="go home">
       		<img src="{{ site.url }}/images/logo-ComplexCity-white.svg" onerror="this.onerror=null; this.src='images/logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
-	    	</a>
 	  	</div>
 
  	  	<!-- the SOCIAL links -->
 	  	<div id="social">
-				 <a href="https://github.com/ComplexCity/" title="our github repository" target="_blank">
-					 <img src="{{ site.url }}/images/follow-us-github-white.png" onmouseover="this.src='{{ site.url }}/images/follow-us-github-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-github-white.png'" /></a>
-				 <a href="https://speakerdeck.com/complexcity" title="our presentations on speakerdeck" target="_blank">
-					 <img src="{{ site.url }}/images/follow-us-speakerdeck-white.png" onmouseover="this.src='{{ site.url }}/images/follow-us-speakerdeck-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-speakerdeck-white.png'" /></a>
-				 <a href="http://twitter.com/complexcity_lab" title="our twitter account" target="_blank">
-					 <img src="{{ site.url }}/images/follow-us-twitter-white.png" onmouseover="this.src='{{ site.url }}/images/follow-us-twitter-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-twitter-white.png'"/></a>
-				 <a href="http://www.weibo.com/complexcity" title="our weibo account" target=_blank>
-					 <img src="{{ site.url }}/images/follow-us-weibo-white.png" onmouseover="this.src='{{ site.url }}/images/follow-us-weibo-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-weibo-white.png'"/></a>
-				 <a href="/blog/feed.xml" title="ComplexCity Lab's Blog RSS feed" target=_blank>
-					 <img src="{{ site.url }}/images/follow-us-syndication-white.png" onmouseover="this.src='{{ site.url }}/images/follow-us-syndication-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-syndication-white.png'"/></a>
-				 <a href="https://pinboard.in/u:shangdaemon/public/" title="our web links" target=_blank>
-					 <img src="{{ site.url }}/images/follow-us-pinboard-white.png" onmouseover="this.src='{{ site.url }}/images/follow-us-pinboard-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-pinboard-white.png'"/></a>
-				 <a href="https://www.goodreads.com/review/list/32004943?shelf=read" title="the books we like" target=_blank>
-					 <img src="{{ site.url }}/images/follow-us-goodreads-white.png" onmouseover="this.src='{{ site.url }}/images/follow-us-goodreads-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-goodreads-white.png'"/></a>
-			</div>
+			{% for item in site.data.social %}
+	  	  		<a href="{{ item.link }}" title="{{ item.title }}" target="_blank">
+				<img src="{{ site.url }}/{{ item.image-white }}" 
+					onmouseover="this.src='{{ site.url }}/{{ item.image-white-hover }}'" 
+					onmouseout="this.src='{{ site.url }}/{{ item.image-white }}'" /></a>
+			{% endfor %}	
+		</div>
 
       <!--the MENU -->
       <nav class="menu_main">
@@ -43,8 +34,13 @@
 
 	<article class="article clearfix" style="padding-top:3em;">
 		<h1 class="col_100 thin center"> {{page.title}} </h1>
-		<p class="thin center">By <a href="/authors/{{author.link}}/" title="Posts by {{author.display_name}}" class="underline-hover">{{author.display_name}}{% if author.chinese_name != '' %} ({{author.chinese_name}}){% endif %}</a> on {{ page.date | date_to_string }}</p>
-		<p><img class="clearfix blog-img-full-size" alt="{{page.image_alt}}" src="{{page.image_big}}" /></p>
+		<p class="thin center">By <a href="/authors/{{author.link}}/" title="Posts by {{author.display_name}}" class="underline-hover">{{author.display_name}}{% if author contains 'chinese_name' %} ({{author.chinese_name}}){% endif %}</a> on {{ page.date | date_to_string }}</p>
+		<p><img class="clearfix blog-img-full-size" alt="{{page.image_alt}}" src="{{page.image_big}}" />
+			<div class="col_100 right small center blog-link-decoration" style="top:-1em;position:relative;color:rgb(70,70,70);text-decoration: none;">
+				{{page.image_credit | markdownify}}
+			</div>
+			
+		</p>
 		<div class="blog-container">
 			{{ content }}
 		</div>
@@ -56,7 +52,7 @@
 					{% endif %}
 				</div>
 				<div class="author-about">
-					<a href="/authors/{{author.link}}/" title="Posts by {{author.display_name}}" class="author">{{author.display_name}}{% if author.chinese_name != '' %} ({{author.chinese_name}}){% endif %}</a>
+					<a href="/authors/{{author.link}}/" title="Posts by {{author.display_name}}" class="author">{{author.display_name}}{% if author contains 'chinese_name' %} ({{author.chinese_name}}){% endif %}</a>
 					<p>{% if author.description != '' %}{{author.description}}{% endif %}</p>
 				</div>
 			</div>

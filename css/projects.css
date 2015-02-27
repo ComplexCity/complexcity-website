@@ -1,0 +1,14 @@
+text {font-family:"Lato"; text-transform:uppercase;}
+line {stroke-linecap:round; stroke-width:1;}
+.svg-line {stroke:#ccc;}
+.svg-line1 {stroke:#FC962B;}
+.svg-line2 {stroke:#CB0063;}
+.svg-line3 {stroke:#871E99;}
+.svg-line4 {stroke:#29D3EF;}
+.svg-line5 {stroke:#16B998;}
+.svg-circle1 {fill:#FC962B;}
+.svg-circle2 {fill:#CB0063;}
+.svg-circle3 {fill:#871E99;}
+.svg-circle4 {fill:#29D3EF;}
+.svg-circle5 {fill:#16B998;}
+#projects-chart svg{width="720";height="240"}

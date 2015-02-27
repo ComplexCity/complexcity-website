@@ -8,14 +8,15 @@
   <meta name="description" content=""> 
   
   <!-- the favicon -->
-  <link rel="icon" type="image/png" href="http://localhost:4000/images/favicon/complexcity.png" />			
-  <link rel="icon" type="image/x-icon" href="http://localhost:4000/images/favicon/complexcity.ico" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/favicon/complexcity-retina.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000images/favicon/complexcity-ipad.png" />
-  <link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/favicon/complexcity-iphone.png" />
+  <link rel="icon" type="image/png" href="http://www.complexcity.org/images/favicon/complexcity.png" />			
+  <link rel="icon" type="image/x-icon" href="http://www.complexcity.org/images/favicon/complexcity.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.complexcity.org/images/favicon/complexcity-retina.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.complexcity.orgimages/favicon/complexcity-ipad.png" />
+  <link rel="apple-touch-icon-precomposed" href="http://www.complexcity.org/images/favicon/complexcity-iphone.png" />
 
   <!-- the style -->
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/captionjs.min.css" />
 
   
 	
@@ -25,6 +26,26 @@
   <script src="/scripts/complexcity.js"></script>
   <script src="/scripts/Autolinker.min.js"></script>
   <script src="/scripts/jquery.equalheights.min.js"></script>
+  <script src="/scripts/jquery.caption.min.js" type="text/javascript"></script>
+  <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-48216837-2', 'auto');
+	  ga('send', 'pageview');
+	  
+	  ga('set', '&uid', {{USER_ID}}); // Définir l'ID utilisateur à partir du paramètre user_id de l'utilisateur connecté.
+	  
+  </script>
+
+
+
+  
+  <link rel="stylesheet" href="/css/projects.css" />
+  <script src="/scripts/d3.min.js"></script>
+  
 
   
 
@@ -41,27 +62,49 @@
       <!-- the LOGO -->
       <div class="logo">
       	<a href="/" alt="Complexcity Lab home" title="go home">
-      		<img src="http://localhost:4000/images/logo-ComplexCity.svg" onerror="this.onerror=null; this.src='http://localhost:4000/images//logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
+      		<img src="http://www.complexcity.org/images/logo-ComplexCity.svg" onerror="this.onerror=null; this.src='http://www.complexcity.org/images//logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
 	    	</a>
 	  	</div>
 	  
      	
      	<!-- the SOCIAL links -->
 	  	<div id="social">
-	  			<a href="https://github.com/ComplexCity/" title="our github repository" target="_blank">
-						<img src="http://localhost:4000/images/follow-us-github.png" onmouseover="this.src='http://localhost:4000/images/follow-us-github-hover.png'" onmouseout="this.src='http://localhost:4000/images/follow-us-github.png'" /></a>
-					<a href="https://speakerdeck.com/complexcity" title="our presentations on speakerdeck" target="_blank">
-						<img src="http://localhost:4000/images/follow-us-speakerdeck.png" onmouseover="this.src='http://localhost:4000/images/follow-us-speakerdeck-hover.png'" onmouseout="this.src='http://localhost:4000/images/follow-us-speakerdeck.png'" /></a>
-					<a href="http://twitter.com/complexcity_lab" title="our twitter account" target="_blank">
-						<img src="http://localhost:4000/images/follow-us-twitter.png" onmouseover="this.src='http://localhost:4000/images/follow-us-twitter-hover.png'" onmouseout="this.src='http://localhost:4000/images/follow-us-twitter.png'"/></a>
-					<a href="http://www.weibo.com/complexcity" title="our weibo account" target=_blank>
-						<img src="http://localhost:4000/images/follow-us-weibo.png" onmouseover="this.src='http://localhost:4000/images/follow-us-weibo-hover.png'" onmouseout="this.src='http://localhost:4000/images/follow-us-weibo.png'"/></a>
-					<a href="/blog/feed.xml" title="ComplexCity Lab's Blog RSS feed" target=_blank>
-						<img src="http://localhost:4000/images/follow-us-syndication.png" onmouseover="this.src='http://localhost:4000/images/follow-us-syndication-hover.png'" onmouseout="this.src='http://localhost:4000/images/follow-us-syndication.png'"/></a>
-					<a href="https://pinboard.in/u:shangdaemon/public/" title="our web links" target=_blank>
-						<img src="http://localhost:4000/images/follow-us-pinboard.png" onmouseover="this.src='http://localhost:4000/images/follow-us-pinboard-hover.png'" onmouseout="this.src='http://localhost:4000/images/follow-us-pinboard.png'"/></a>
-					<a href="https://www.goodreads.com/review/list/32004943?shelf=read" title="the books we like" target=_blank>
-						<img src="http://localhost:4000/images/follow-us-goodreads.png" onmouseover="this.src='http://localhost:4000/images/follow-us-goodreads-hover.png'" onmouseout="this.src='http://localhost:4000/images/follow-us-goodreads.png'"/></a>
+	  		
+	  	  		<a href="https://github.com/ComplexCity/" title="our github repository" target="_blank">
+				<img src="http://www.complexcity.org/images/follow-us/follow-us-github.png" 
+					onmouseover="this.src='http://www.complexcity.org/images/follow-us/follow-us-github-hover.png'" 
+					onmouseout="this.src='http://www.complexcity.org/images/follow-us/follow-us-github.png'" /></a>
+			
+	  	  		<a href="https://speakerdeck.com/complexcity" title="our presentations on speakerdeck" target="_blank">
+				<img src="http://www.complexcity.org/images/follow-us/follow-us-speakerdeck.png" 
+					onmouseover="this.src='http://www.complexcity.org/images/follow-us/follow-us-speakerdeck-hover.png'" 
+					onmouseout="this.src='http://www.complexcity.org/images/follow-us/follow-us-speakerdeck.png'" /></a>
+			
+	  	  		<a href="http://twitter.com/complexcity_lab" title="our twitter account" target="_blank">
+				<img src="http://www.complexcity.org/images/follow-us/follow-us-twitter.png" 
+					onmouseover="this.src='http://www.complexcity.org/images/follow-us/follow-us-twitter-hover.png'" 
+					onmouseout="this.src='http://www.complexcity.org/images/follow-us/follow-us-twitter.png'" /></a>
+			
+	  	  		<a href="http://www.weibo.com/complexcity" title="our weibo account" target="_blank">
+				<img src="http://www.complexcity.org/images/follow-us/follow-us-weibo.png" 
+					onmouseover="this.src='http://www.complexcity.org/images/follow-us/follow-us-weibo-hover.png'" 
+					onmouseout="this.src='http://www.complexcity.org/images/follow-us/follow-us-weibo.png'" /></a>
+			
+	  	  		<a href="http://complexcity.org/blog/feed.xml" title="ComplexCity Lab's Blog RSS feed" target="_blank">
+				<img src="http://www.complexcity.org/images/follow-us/follow-us-syndication.png" 
+					onmouseover="this.src='http://www.complexcity.org/images/follow-us/follow-us-syndication-hover.png'" 
+					onmouseout="this.src='http://www.complexcity.org/images/follow-us/follow-us-syndication.png'" /></a>
+			
+	  	  		<a href="https://pinboard.in/u:shangdaemon/public/" title="our web links on pinboard" target="_blank">
+				<img src="http://www.complexcity.org/images/follow-us/follow-us-pinboard.png" 
+					onmouseover="this.src='http://www.complexcity.org/images/follow-us/follow-us-pinboard-hover.png'" 
+					onmouseout="this.src='http://www.complexcity.org/images/follow-us/follow-us-pinboard.png'" /></a>
+			
+	  	  		<a href="https://www.goodreads.com/review/list/32004943?shelf=read" title="the books we like" target="_blank">
+				<img src="http://www.complexcity.org/images/follow-us/follow-us-goodreads.png" 
+					onmouseover="this.src='http://www.complexcity.org/images/follow-us/follow-us-goodreads-hover.png'" 
+					onmouseout="this.src='http://www.complexcity.org/images/follow-us/follow-us-goodreads.png'" /></a>
+			
 			</div>
 
       <!--the MENU -->
@@ -77,9 +120,563 @@
       <!-- credit work in the top corner, image in css -->
     </header>
 	<!-- the MAIN CONTENT -->
+	<div class="white" style="border-bottom:0px solid #ccc;">
+		<article class="hero clearfix center punchline">
+			<div class="col_100 right small center" style="top:-1.5em;position:relative;color:rgb(70,70,70);text-decoration: none;">
+				<!-- Picture Attribution for Licenced work-->
+				<p>Photo: <a href="https://www.flickr.com/photos/stuckincustoms/8242941446/">The Hypercity of Shanghai</a> by <a href="https://www.flickr.com/photos/stuckincustoms/">Trey Ratcliff</a> , licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY NC SA 2.0</a></p>
+			</div>
+		</article>
+	</div>
+	
 	<article class="article clearfix" style="padding-top:0em;">
-		<h1 class="thin center"></h1>
-		<div class="container">
-
+		<h1 class="thin center">14 INTERNATIONAL PROJECTS</h1>
+		<div class="container" id="projects-chart" class="center">
+			<svg id="viz" width="100%" height="240px" style="min-width:400px">
+				<g>
+					<text x="25%" y="45" text-anchor="middle"  class="svg-text">Culture</text>
+					<text x="41%" y="45" text-anchor="middle" class="svg-text">Mobility</text>
+					<text x="58%" y="45" text-anchor="middle" class="svg-text">Energy</text>
+					<text x="75%" y="45" text-anchor="middle" class="svg-text">Urbanism</text>
+					<text x="91%" y="45" text-anchor="middle" class="svg-text">Health</text>
+				</g>
+				<g>
+					<text x="16%" y="95" text-anchor="end" class="svg-text">Citizen</text>
+					<text x="16%" y="155" text-anchor="end" class="svg-text">Data Science</text>
+					<text x="16%" y="215" text-anchor="end" class="svg-text">Governance</text>
+				</g>
+				<line x1="25%" y1="60" x2="25%" y2="210" class="svg-line1" />
+				<line x1="41%" y1="60" x2="41%" y2="210" class="svg-line2" />
+				<line x1="58%" y1="60" x2="58%" y2="210" class="svg-line3" />
+				<line x1="75%" y1="60" x2="75%" y2="210" class="svg-line4" />
+				<line x1="91%" y1="60" x2="91%" y2="210" class="svg-line5" />
+				<line x1="18%" y1="90" x2="91%" y2="90" class="svg-line" />
+				<line x1="18%" y1="150" x2="91%" y2="150" class="svg-line" />
+				<line x1="18%" y1="210" x2="91%" y2="210" class="svg-line" />
+			</svg>
+			<ul class="project-institutions-list">
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/traffic-flow-modelization.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('1');" 
+							onmouseout="hideCircles('1');">Traffic Flow Modelization</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/collaborative-surveillance-in-CCTV-sensor-network.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('2');" 
+							onmouseout="hideCircles('2');">Collaborative Surveillance in Sensor Network</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/Enginering-Design-Of-Cities.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('3');" 
+							onmouseout="hideCircles('3');">Engineering Design of Cities</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/Platform-for-Sustainable-Practices.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('4');" 
+							onmouseout="hideCircles('4');">Platform for Sustainable Practices</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/Smart-City-Logistics.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('5');" 
+							onmouseout="hideCircles('5');">Smart City Logistics</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/City-Health-Monitoring.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('6');" 
+							onmouseout="hideCircles('6');">City Health Monitoring</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/Traffic-Sound-Analysis.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('7');" 
+							onmouseout="hideCircles('7');">Traffic Sound Analysis</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/Web-Mobility-Analysis.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('8');" 
+							onmouseout="hideCircles('8');">Web Mobility Analysis</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/building-lifecycle-management-and-serious-gaming.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('9');" 
+							onmouseout="hideCircles('9');">BLM & Serious Gaming</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/Digital-Footprint-of-City.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('10');" 
+							onmouseout="hideCircles('10');">Digital Footprint of City</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/urban-metabolism-and-sustainability.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('11');" 
+							onmouseout="hideCircles('11');">Urban Metabolism & Sustainability</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/digital-eternities.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('12');" 
+							onmouseout="hideCircles('12');">Digital Eternities</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/home-energy-management.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('13');" 
+							onmouseout="hideCircles('13');">Home Energy Management</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+		  		<li>
+					<a href="/projects/14-urban-social-cultural-transition.html" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('14');" 
+							onmouseout="hideCircles('14');">urban Socio-Cultural Transition</a>&bull;
+				</li>
+			
+			
+			
+		  	
+		  	
+			
+			
+		  	
+			
+		  	
+			
+		  	
+			
+		  	
+			
+		  	
+			
+		  	
+			
+		  	
+			
+		  	
+			
+		  	
+			
+		  	
+			
+		  	
+			
+		  	
+			
+			</ul>
+		</div>
+		<div class="container studies-and-projects-box">
+			
+			
+		    
+		    
+		    <div class="studies-and-projects-item clearfix">
+		     
+		      
+		      <a href="/projects/traffic-flow-modelization.html" 
+		      	title="Internet of Vehicules Traffic Flow Models For Road Network Optimization"
+		      	onmouseover="showCircles('1');" 
+				onmouseout="hideCircles('1');">
+			      <img src="http://www.complexcity.org/images/projects/traffic-flow-square.jpg" 
+			      	class="caption" 
+			      	alt="" 
+			      	data-caption="Internet of Vehicules Traffic Flow Models For Road Network Optimization" 
+			      	/>
+			      	</a>
+			      	
+		    </div>
+			
+		    
+		    
+		    <div class="studies-and-projects-item clearfix">
+		     
+		      
+		      <a href="/projects/collaborative-surveillance-in-CCTV-sensor-network.html" 
+		      	title="Collaborative Surveillance And Real-Time Abnormal Detection In Large-Scale Camera/Sensor Network"
+		      	onmouseover="showCircles('2');" 
+				onmouseout="hideCircles('2');">
+			      <img src="http://www.complexcity.org/images/projects/collaborative-surveillance-square.jpg" 
+			      	class="caption" 
+			      	alt="" 
+			      	data-caption="Collaborative Surveillance And Real-Time Abnormal Detection In Large-Scale Camera/Sensor Network" 
+			      	/>
+			      	</a>
+			      	
+		    </div>
+			
+		    
+		    
+		    <div class="studies-and-projects-item clearfix">
+		     
+		      
+		      <a href="/projects/Enginering-Design-Of-Cities.html" 
+		      	title="Engineering Modeling Knowledge For Complexity Management In The Design Of Complex City"
+		      	onmouseover="showCircles('3');" 
+				onmouseout="hideCircles('3');">
+			      <img src="http://www.complexcity.org/images/projects/engineering-city-design-square.jpg" 
+			      	class="caption" 
+			      	alt="central Shanghai as shown in planning exhibition museum in Shanghai" 
+			      	data-caption="Engineering Modeling Knowledge For Complexity Management In The Design Of Complex City" 
+			      	/>
+			      	</a>
+			      	
+		    </div>
+			
+		    
+		    
+		    <div class="studies-and-projects-item clearfix">
+		     
+		      
+		      <a href="/projects/Platform-for-Sustainable-Practices.html" 
+		      	title="Platform For Optimized Sustainable Practices Inside Smart Cities"
+		      	onmouseover="showCircles('4');" 
+				onmouseout="hideCircles('4');">
+			      <img src="http://www.complexcity.org/images/projects/platform-sustainable-practice-square.jpg" 
+			      	class="caption" 
+			      	alt="Food Gardens, Channels, Vertical Farms - Shanghai Sustainable Masterplan" 
+			      	data-caption="Platform For Optimized Sustainable Practices Inside Smart Cities" 
+			      	/>
+			      	</a>
+			      	
+		    </div>
+			
+		    
+		     
+		    <div class="studies-and-projects-item" style="background:#eee">
+		     
+		      
+		      <a href="/projects/Smart-City-Logistics.html" 
+		      	title="Smart City Logistics"
+		      	onmouseover="showCircles('5');" 
+				onmouseout="hideCircles('5');">
+			      <img src="http://www.complexcity.org/images/projects/smart-city-logistics-square.jpg" 
+			      	class="caption" 
+			      	alt="Yangshan Deep-Water Port" 
+			      	data-caption="Smart City Logistics" 
+			      	/>
+			      	</a>
+			      	
+			      	<span class="thin" style="font-variant: small-caps;"><strong class="importantNews">Funded</strong> by French National Agency for Research</span>
+			      	
+		    </div>
+			
+		    
+		    
+		    <div class="studies-and-projects-item clearfix">
+		     
+		      
+		      <a href="/projects/City-Health-Monitoring.html" 
+		      	title="Better Health Monitoring In A Context Of Smart City, Application To Parkinson's Diseases"
+		      	onmouseover="showCircles('6');" 
+				onmouseout="hideCircles('6');">
+			      <img src="http://www.complexcity.org/images/projects/city-health-monitoring-square.jpg" 
+			      	class="caption" 
+			      	alt="" 
+			      	data-caption="Better Health Monitoring In A Context Of Smart City, Application To Parkinson's Diseases" 
+			      	/>
+			      	</a>
+			      	
+		    </div>
+			
+		    
+		    
+		    <div class="studies-and-projects-item clearfix">
+		     
+		      
+		      <a href="/projects/Traffic-Sound-Analysis.html" 
+		      	title="Audio Scene Analysis For Transportation Monitoring And Urban Safety"
+		      	onmouseover="showCircles('7');" 
+				onmouseout="hideCircles('7');">
+			      <img src="http://www.complexcity.org/images/projects/traffic-sound-analysis-square.jpg" 
+			      	class="caption" 
+			      	alt="" 
+			      	data-caption="Audio Scene Analysis For Transportation Monitoring And Urban Safety" 
+			      	/>
+			      	</a>
+			      	
+		    </div>
+			
+		    
+		     
+		    <div class="studies-and-projects-item" style="background:#eee">
+		     
+		      
+		      <a href="/projects/Web-Mobility-Analysis.html" 
+		      	title="Web Data Mining & Public Mobility Analysis"
+		      	onmouseover="showCircles('8');" 
+				onmouseout="hideCircles('8');">
+			      <img src="http://www.complexcity.org/images/projects/web-mobility-analysis-square.jpg" 
+			      	class="caption" 
+			      	alt="woman crossing a street in paris while looking at her phone" 
+			      	data-caption="Web Data Mining & Public Mobility Analysis" 
+			      	/>
+			      	</a>
+			      	
+			      	<span class="thin" style="font-variant: small-caps;"><strong class="importantNews">Funded</strong> by French National Agency for Research</span>
+			      	
+		    </div>
+			
+		    
+		    
+		    <div class="studies-and-projects-item clearfix">
+		     
+		      
+		      <a href="/projects/building-lifecycle-management-and-serious-gaming.html" 
+		      	title="Building Life Management In China, Coping With A Complex Problem Using Serious Gaming To Extract Good Data"
+		      	onmouseover="showCircles('9');" 
+				onmouseout="hideCircles('9');">
+			      <img src="http://www.complexcity.org/images/projects/blm-serious-gaming-square.jpg" 
+			      	class="caption" 
+			      	alt="" 
+			      	data-caption="Building Life Management In China, Coping With A Complex Problem Using Serious Gaming To Extract Good Data" 
+			      	/>
+			      	</a>
+			      	
+		    </div>
+			
+		    
+		     
+		    <div class="studies-and-projects-item" style="background:#eee">
+		     
+		      
+		      <a href="/projects/Digital-Footprint-of-City.html" 
+		      	title="Dynamicité, Digital Footprint of a City"
+		      	onmouseover="showCircles('10');" 
+				onmouseout="hideCircles('10');">
+			      <img src="http://www.complexcity.org/images/projects/digital-footprint-city-square2.jpg" 
+			      	class="caption" 
+			      	alt="" 
+			      	data-caption="Dynamicité, Digital Footprint of a City" 
+			      	/>
+			      	</a>
+			      	
+			      	<span class="thin" style="font-variant: small-caps;"><strong class="importantNews">Funded</strong> by French Investment for the Future</span>
+			      	
+		    </div>
+			
+		    
+		    
+		    <div class="studies-and-projects-item clearfix">
+		     
+		      
+		      <a href="/projects/urban-metabolism-and-sustainability.html" 
+		      	title="Urban Metabolism & Sustainability"
+		      	onmouseover="showCircles('11');" 
+				onmouseout="hideCircles('11');">
+			      <img src="http://www.complexcity.org/images/projects/urban-metabolism-sustainability-square.jpg" 
+			      	class="caption" 
+			      	alt="" 
+			      	data-caption="Urban Metabolism & Sustainability" 
+			      	/>
+			      	</a>
+			      	
+		    </div>
+			
+		    
+		     
+		    <div class="studies-and-projects-item" style="background:#eee">
+		     
+		      
+		      <a href="/projects/digital-eternities.html" 
+		      	title="Digital Eternities, Tribute To The Ancestors"
+		      	onmouseover="showCircles('12');" 
+				onmouseout="hideCircles('12');">
+			      <img src="http://www.complexcity.org/images/projects/digital-eternities-square.jpg" 
+			      	class="caption" 
+			      	alt="" 
+			      	data-caption="Digital Eternities, Tribute To The Ancestors" 
+			      	/>
+			      	</a>
+			      	
+			      	<span class="thin" style="font-variant: small-caps;"><strong class="importantNews">Funded</strong> by French National Agency for Research</span>
+			      	
+		    </div>
+			
+		    
+		    
+		    <div class="studies-and-projects-item clearfix">
+		     
+		      
+		      <a href="/projects/home-energy-management.html" 
+		      	title="Energy management in smart homes with economic, behavioral and environmental constraints"
+		      	onmouseover="showCircles('13');" 
+				onmouseout="hideCircles('13');">
+			      <img src="http://www.complexcity.org/images/projects/home-energy-management-square.jpg" 
+			      	class="caption" 
+			      	alt="" 
+			      	data-caption="Energy management in smart homes with economic, behavioral and environmental constraints" 
+			      	/>
+			      	</a>
+			      	
+		    </div>
+			
+		    
+		    
+		    <div class="studies-and-projects-item clearfix">
+		     
+		      
+		      <a href="/projects/14-urban-social-cultural-transition.html" 
+		      	title="Socio-Cultural Transition and Urban Dynamics In Shanghai"
+		      	onmouseover="showCircles('14');" 
+				onmouseout="hideCircles('14');">
+			      <img src="http://www.complexcity.org/images/projects/urban-social-cultural-transition-square.jpg" 
+			      	class="caption" 
+			      	alt="" 
+			      	data-caption="Socio-Cultural Transition and Urban Dynamics In Shanghai" 
+			      	/>
+			      	</a>
+			      	
+		    </div>
+			
+		    
+		    
+		    <div class="studies-and-projects-item clearfix">
+		     
+		      
+		      <a href="/projects/15-continuous-call-for-project.html" 
+		      	title="Continuous call for project"
+		      	onmouseover="showCircles('15');" 
+				onmouseout="hideCircles('15');">
+			      <img src="http://www.complexcity.org/images/projects/continuous-call-project-square2.jpg" 
+			      	class="caption" 
+			      	alt="" 
+			      	data-caption="Continuous call for project" 
+			      	/>
+			      	</a>
+			      	
+		    </div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		</div>
 	</article>
+	<script type="text/javascript">$(window).load(function() {
+    $('img.caption').captionjs({
+	    'class_name'      : 'captionjs',
+        'schema'          : true,        // Use schema.org markup (i.e., itemtype, itemprop)
+        'mode'            : 'animated',   // default | static | animated | hide
+        'debug_mode'      : false,       // Output debug info to the JS console
+        'force_dimensions': false        // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
+	    
+    });
+});</script>
+	  	<script src="/scripts/projects.js"></script>
+<div class="before-footer center clearfix"></div>
+	<footer class="footer clearfix grey">
+		<article class="article clearfix">
+			<div class="col_100 center clearfix">
+				<p class="thin">Complexcity Lab is a collaboration between french Université de Technologie Group and Shanghai University</p>
+				<!-- the OFFICIAL CREDIT -->
+				<a href="http://interactions.utc.fr/Le-Groupe-UT-avance-en-reseau" alt="UT Group" title="UT Group" class="col_50 center"><img class="img-logo" src="http://www.complexcity.org/images/partners/logo-3UT.svg" /></a>
+				<a href="http://shu.edu.cn" alt="Shanghai University logo black and white" title="go to Shanghai University homepage" class="col_50 center"><img class="img-logo" src="http://www.complexcity.org/images/partners/logo-SHU-black-SD.png" /></a>
+			</div>
+
+			<!-- the LICENCE -->
+			<div class="cc thin small">
+				<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0;height:1em;margin-right:0.5em" src="http://www.complexcity.org/images/by-nc-nd.svg" onerror="this.onerror=null; this.src='http://www.complexcity.org/images/by-nc-nd.png'" /></a> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ComplexCity Lab web content</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.complexcity.org" property="cc:attributionName" rel="cc:attributionURL">ComplexCity Lab</a> is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY NC ND 3.0</a> unless specified otherwise.</p>
+				
+				<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0;height:1em;margin-right:0.5em" src="http://www.complexcity.org/images/by.svg" onerror="this.onerror=null; this.src='http://www.complexcity.org/images/by.png'"/></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ComplexCity Lab website code</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.complexcity.org" property="cc:attributionName" rel="cc:attributionURL">ComplexCity Lab</a> is licensed under <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> and available on <a href="https://github.com/complexcity" target="_blank">github</a></p>
+				<p>This website was designed and developed by Fabien Pfaender with help of Laetitia Pfaender and MonZen Tzen.
+			</div>
+		</article>
+	</footer>
+</body>
+</html>

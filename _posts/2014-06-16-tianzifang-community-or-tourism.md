@@ -5,6 +5,7 @@ author: Hao
 image_big: /assets/tianzifang-community-or-tourism/big.jpg
 image_small: /assets//tianzifang-community-or-tourism/square.jpg
 image_alt: "Tianzifang"
+image_credit: "Photo: [TianZiFang II](http://www.flickr.com/photos/birgerhoppe/4729645791) by [Birger Hoppe](https://www.flickr.com/photos/birgerhoppe/) , licensed under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)"
 comments: true
 keywords:
 description:
@@ -52,5 +53,3 @@ Legend of "Tianzifang": Yuan King of Song (531–517 BC) asked for paintings, so
 3. <a name="3"></a>Shinohara, Hiroyuki. "Mutation of Tianzifang, Taikang Road, Shanghai". The 4th Conference of the [International Forum on Urbanism](http://newurbanquestion.ifou.org/proceedings/5%20The%20Transformation%20of%20Urban%20Form/poster%20papers/D039_Hiroyuki_Shinohara_Mutation%20of%20Tianzifang.pdf), Amsterdam/Delft, (2009): pp. 749-752.
 4. <a name="4"></a>Chilingerian, Jenna. "Engagement Through Arts". [CEOs for Cities](http://www.ceosforcities.org/blog/engagement-through-arts/), August 21, 2013.
 5. <a name="5"></a>Pellerin, Fleur, "France must become the world standard for e-tourism", [Paris Worldwide](http://issuu.com/omegaconseil/docs/adp_paris_world_wide), (May/June 2014): pp. 68-72.
-
-Photo: [TianZiFang II](http://www.flickr.com/photos/birgerhoppe/4729645791) by [Birger Hoppe](https://www.flickr.com/photos/birgerhoppe/) , licensed under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)

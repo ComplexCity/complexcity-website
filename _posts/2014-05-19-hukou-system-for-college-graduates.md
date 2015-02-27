@@ -2,9 +2,10 @@
 layout: post
 title: "Hukou system for college graduates"
 author: Hao
-image_big: /assets/hukou-system-for-college-graduates/big.png
-image_small: /assets/hukou-system-for-college-graduates/square.png
+image_big: /assets/hukou-system-for-college-graduates/big.jpg
+image_small: /assets/hukou-system-for-college-graduates/square.jpg
 image_alt: ""
+image_credit: "Photo: [Heilongjiang Oct 2011](https://flic.kr/p/aAapwK) by [Remko Tanis](https://www.flickr.com/photos/remkotanis/) , licensed under [CC BY-ND-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/) / Modified"
 comments: false
 keywords:
 description:

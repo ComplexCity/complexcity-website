@@ -1,0 +1,76 @@
+{% include header.html %}
+{% assign author = site.data.authors[page.author] %}
+	<header class="header clearfix container">
+      <!-- the LOGO -->
+      <div class="logo">
+      	<a href="/" alt="Complexcity Lab home" title="go home">
+      		<img src="{{ site.url }}/images/logo-ComplexCity.svg" onerror="this.onerror=null; this.src='{{ site.url }}/images//logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
+	    	</a>
+	  	</div>
+	  
+     	
+     	<!-- the SOCIAL links -->
+	  	<div id="social">
+	  		{% for item in site.data.social %}
+	  	  		<a href="{{ item.link }}" title="{{ item.title }}" target="_blank">
+				<img src="{{ site.url }}/{{ item.image }}" 
+					onmouseover="this.src='{{ site.url }}/{{ item.image-hover }}'" 
+					onmouseout="this.src='{{ site.url }}/{{ item.image }}'" /></a>
+			{% endfor %}
+			</div>
+
+      <!--the MENU -->
+      <nav class="menu_main">
+        <ul>
+					<li><a href="/about/">ABOUT</a></li>
+					<li class="active"><a href="/projects/">PROJECTS</a></li>
+					<li><a href="/studies/">STUDIES</a></li>
+					<li><a href="/blog/">BLOG</a></li>
+        </ul>
+      </nav>
+      
+      <!-- credit work in the top corner, image in css -->
+    </header>
+	<!-- the MAIN CONTENT -->
+	<div class="white" style="border-bottom:0px solid #ccc;">
+			<img class="clearfix blog-img-full-size" alt="{{page.image_alt}}" src="{{site.ur}}/images/{{page.image_big}}" />
+			<div class="col_100 right small center blog-link-decoration" style="top:-1em;position:relative;color:rgb(70,70,70);text-decoration: none;">
+				{{page.image_credit | markdownify}}
+			</div>
+	</div>
+
+	<article class="article clearfix">
+		<div class="blog-container">
+			<h1 class="col_100 thin center"> {{page.title}} </h1>
+			<ul style="list-style-type:none;">
+			<li>
+				<ul class="project-institutions-list thin">
+				{% assign institutions = page.institutions | split: ', ' %}
+				{% for institution in institutions %}
+					{% assign detail = site.data.partners[institution] %}
+					<li>
+						<span>
+							<a href="{{detail.website}}" 
+							target="_blank" 
+							title="go to {{detail.fullname}} website" 
+							onmouseover="$('img#{{institution}}').attr('src', '{{site.url}}/images/partners/maki-{{detail.type}}-hover.png');" 
+							onmouseout="$('img#{{institution}}').attr('src', '{{site.url}}/images/partners/maki-{{detail.image}}.png');" 
+							
+							>
+								<img id="{{institution}}" src="{{site.url}}/images/partners/maki-{{detail.image}}.png" alt="{{detail.fullname}} pictogram" /><br />
+								<acronym title="{{detail.fullname}}">{{institution}}</acronym></a>
+						</span>
+					</li>
+				{% endfor %}
+				</ul>
+			</li>
+			<li style="clear:both;padding-top:0em;margin-top:0"><strong>French Team Leader</strong>: <em>{{page.french_team_leader}}</em></li>
+			<li><strong>Chinese Team Leader</strong>: <em>{{page.chinese_team_leader}}</em></li>
+			<li><strong>Team</strong>: <em>{{page.team}}</em></li>
+			</ul>
+			<h3 class="center thin">ABSTRACT</h3>
+			{{ content }}
+		</div>
+
+			
+{% include footer.html %}

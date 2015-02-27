@@ -3,6 +3,7 @@ title: ComplexCity Lab - Projects
 Author: Fabien Pfaender
 Keywords: UTC, UTT, UTBM, SHU, ComplexCity, Laboratory, Comprehensive, Data Science, City, UTSEUS
 Description:
+Name: projects
 ---
 {% include header.html %}
 	<header class="header clearfix container">
@@ -16,20 +17,12 @@ Description:
      	
      	<!-- the SOCIAL links -->
 	  	<div id="social">
-	  			<a href="https://github.com/ComplexCity/" title="our github repository" target="_blank">
-						<img src="{{ site.url }}/images/follow-us-github.png" onmouseover="this.src='{{ site.url }}/images/follow-us-github-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-github.png'" /></a>
-					<a href="https://speakerdeck.com/complexcity" title="our presentations on speakerdeck" target="_blank">
-						<img src="{{ site.url }}/images/follow-us-speakerdeck.png" onmouseover="this.src='{{ site.url }}/images/follow-us-speakerdeck-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-speakerdeck.png'" /></a>
-					<a href="http://twitter.com/complexcity_lab" title="our twitter account" target="_blank">
-						<img src="{{ site.url }}/images/follow-us-twitter.png" onmouseover="this.src='{{ site.url }}/images/follow-us-twitter-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-twitter.png'"/></a>
-					<a href="http://www.weibo.com/complexcity" title="our weibo account" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-weibo.png" onmouseover="this.src='{{ site.url }}/images/follow-us-weibo-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-weibo.png'"/></a>
-					<a href="/blog/feed.xml" title="ComplexCity Lab's Blog RSS feed" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-syndication.png" onmouseover="this.src='{{ site.url }}/images/follow-us-syndication-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-syndication.png'"/></a>
-					<a href="https://pinboard.in/u:shangdaemon/public/" title="our web links" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-pinboard.png" onmouseover="this.src='{{ site.url }}/images/follow-us-pinboard-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-pinboard.png'"/></a>
-					<a href="https://www.goodreads.com/review/list/32004943?shelf=read" title="the books we like" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-goodreads.png" onmouseover="this.src='{{ site.url }}/images/follow-us-goodreads-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-goodreads.png'"/></a>
+	  		{% for item in site.data.social %}
+	  	  		<a href="{{ item.link }}" title="{{ item.title }}" target="_blank">
+				<img src="{{ site.url }}/{{ item.image }}" 
+					onmouseover="this.src='{{ site.url }}/{{ item.image-hover }}'" 
+					onmouseout="this.src='{{ site.url }}/{{ item.image }}'" /></a>
+			{% endfor %}
 			</div>
 
       <!--the MENU -->
@@ -45,9 +38,91 @@ Description:
       <!-- credit work in the top corner, image in css -->
     </header>
 	<!-- the MAIN CONTENT -->
+	<div class="white" style="border-bottom:0px solid #ccc;">
+		<article class="hero clearfix center punchline">
+			<div class="col_100 right small center" style="top:-1.5em;position:relative;color:rgb(70,70,70);text-decoration: none;">
+				<!-- Picture Attribution for Licenced work-->
+				<p>Photo: <a href="https://www.flickr.com/photos/stuckincustoms/8242941446/">The Hypercity of Shanghai</a> by <a href="https://www.flickr.com/photos/stuckincustoms/">Trey Ratcliff</a> , licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY NC SA 2.0</a></p>
+			</div>
+		</article>
+	</div>
+	
 	<article class="article clearfix" style="padding-top:0em;">
-		<h1 class="thin center"></h1>
-		<div class="container">
-
+		<h1 class="thin center">14 INTERNATIONAL PROJECTS</h1>
+		<div class="container" id="projects-chart" class="center">
+			<svg id="viz" width="100%" height="240px" style="min-width:400px">
+				<g>
+					<text x="25%" y="45" text-anchor="middle"  class="svg-text">Culture</text>
+					<text x="41%" y="45" text-anchor="middle" class="svg-text">Mobility</text>
+					<text x="58%" y="45" text-anchor="middle" class="svg-text">Energy</text>
+					<text x="75%" y="45" text-anchor="middle" class="svg-text">Urbanism</text>
+					<text x="91%" y="45" text-anchor="middle" class="svg-text">Health</text>
+				</g>
+				<g>
+					<text x="16%" y="95" text-anchor="end" class="svg-text">Citizen</text>
+					<text x="16%" y="155" text-anchor="end" class="svg-text">Data Science</text>
+					<text x="16%" y="215" text-anchor="end" class="svg-text">Governance</text>
+				</g>
+				<line x1="25%" y1="60" x2="25%" y2="210" class="svg-line1" />
+				<line x1="41%" y1="60" x2="41%" y2="210" class="svg-line2" />
+				<line x1="58%" y1="60" x2="58%" y2="210" class="svg-line3" />
+				<line x1="75%" y1="60" x2="75%" y2="210" class="svg-line4" />
+				<line x1="91%" y1="60" x2="91%" y2="210" class="svg-line5" />
+				<line x1="18%" y1="90" x2="91%" y2="90" class="svg-line" />
+				<line x1="18%" y1="150" x2="91%" y2="150" class="svg-line" />
+				<line x1="18%" y1="210" x2="91%" y2="210" class="svg-line" />
+			</svg>
+			<ul class="project-institutions-list">
+			{% for page in site.pages %}
+		  	{% if page.category =='official-project' %}
+		  	{% unless page.id == 15 %}
+		  		<li>
+					<a href="{{ page.url }}" 
+						class="no-decoration" 
+							style="padding-right:0.5em;" 
+							onmouseover="showCircles('{{page.id}}');" 
+							onmouseout="hideCircles('{{page.id}}');">{{page.title-short}}</a>&bull;
+				</li>
+			{% endunless %}
+			{% endif %}
+			{% endfor %}
+			</ul>
+		</div>
+		<div class="container studies-and-projects-box">
+			{% for page in site.pages %}
+			{% if page.category =='official-project' %}
+		    
+		    {% if page.funding =='none' %}
+		    <div class="studies-and-projects-item clearfix">
+		    {% else %} 
+		    <div class="studies-and-projects-item" style="background:#eee">
+		    {% endif %} 
+		      
+		      <a href="{{ page.url }}" 
+		      	title="{{page.title}}"
+		      	onmouseover="showCircles('{{page.id}}');" 
+				onmouseout="hideCircles('{{page.id}}');">
+			      <img src="{{ site.url }}/images/{{page.image_small}}" 
+			      	class="caption" 
+			      	alt="{{page.image_alt}}" 
+			      	data-caption="{{page.title}}" 
+			      	/>
+			      	</a>
+			      	{% unless page.funding =='none' %}
+			      	<span class="thin" style="font-variant: small-caps;"><strong class="importantNews">Funded</strong> by {{page.funding}}</span>
+			      	{% endunless %}
+		    </div>{% endif %}{% endfor %}
 		</div>
 	</article>
+	<script type="text/javascript">$(window).load(function() {
+    $('img.caption').captionjs({
+	    'class_name'      : 'captionjs',
+        'schema'          : true,        // Use schema.org markup (i.e., itemtype, itemprop)
+        'mode'            : 'animated',   // default | static | animated | hide
+        'debug_mode'      : false,       // Output debug info to the JS console
+        'force_dimensions': false        // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
+	    
+    });
+});</script>
+	  	<script src="/scripts/projects.js"></script>
+{% include footer.html %}

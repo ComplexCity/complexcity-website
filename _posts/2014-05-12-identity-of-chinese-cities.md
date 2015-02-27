@@ -5,6 +5,7 @@ author: Hao
 image_big: /assets/identity-of-chinese-cities/big.png
 image_small: /assets/identity-of-chinese-cities/square.png
 image_alt: workers on a construction site
+image_credit: "Photo: Chinese workers by Complexcity Lab, licensed under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)" 
 comments: true
 keywords:
 description:
@@ -58,8 +59,6 @@ If Chinese cities are willing to achieve their ambitions and be highly competiti
 11. <a name="11"></a>[中华人民共和国城乡规划法][11] (Urban and Rural Planning Law of the People’s Republic of China)
 12. <a name="12"></a>Xu, Jiang and Anthony G.O. Yeh., "City Repositioning and Competitiveness Building in Regional Development: New Development Strategies in Guangzhou, China." *International Journal of Urban and Regional Research*, 29 (2005): 283–308. doi: 10.1111/j.1468-2427.2005.00585.x (see it on [Wiley Online Library][12])
 13.	<a name="13"></a>[CEOs for Cities][13]
-
-Photo: Chinese workers by Complexcity Lab, licensed under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)
 
 [1]:http://www.goodreads.com/book/show/11452166-the-spirit-of-cities "book on GoodReads"
 [4]:http://www.nytimes.com/2013/07/20/world/asia/survey-in-china-shows-wide-income-gap.html "article on The New York Times"

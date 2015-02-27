@@ -1,0 +1,110 @@
+---
+title: ComplexCity Lab - Data
+Author: Fabien Pfaender
+Keywords: UTC, UTT, UTBM, SHU, ComplexCity, Laboratory, Comprehensive, Data Science, City, UTSEUS
+Description:
+---
+{% include header.html %}
+	<header class="header clearfix container">
+      <!-- the LOGO -->
+      <div class="logo">
+      	<a href="/" alt="Complexcity Lab home" title="go home">
+      		<img src="images/logo-ComplexCity.svg" onerror="this.onerror=null; this.src='images/logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
+	    	</a>
+	  	</div>
+      
+      <!-- the SOCIAL links -->
+	  	<div id="social">
+	  		{% for item in site.data.social %}
+	  	  		<a href="{{ item.link }}" title="{{ item.title }}" target="_blank">
+				<img src="{{ site.url }}/{{ item.image }}" 
+					onmouseover="this.src='{{ site.url }}/{{ item.image-hover }}'" 
+					onmouseout="this.src='{{ site.url }}/{{ item.image }}'" /></a>
+			{% endfor %}
+			</div>
+			<!--the MENU -->
+      <nav class="menu_main">
+        <ul>
+          <li><a href="/about/">ABOUT</a></li>
+          <li><a href="/projects/">PROJECTS</a></li>
+          <li><a href="/studies/">STUDIES</a></li>
+          <li><a href="/blog/">BLOG</a></li>
+        </ul>
+      </nav>
+      
+      <!-- credit work in the top corner, image in css -->
+    </header>
+    
+    <a name="workshop"></a>
+	<div class="grey" style="border-bottom:1px solid #ccc;">
+		<!-- the PUNCHLINE -->
+		<article class="hero clearfix center punchline">
+			<div class="col_100 right small center" style="top:-1.5em;position:relative;color:rgb(70,70,70);text-decoration: none;">
+				<!-- Picture Attribution for Licenced work-->
+				<p>Photo: <a href="https://www.flickr.com/photos/stuckincustoms/8242941446/">The Hypercity of Shanghai</a> by <a href="https://www.flickr.com/photos/stuckincustoms/">Trey Ratcliff</a> , licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY NC SA 2.0</a></p>
+			</div>
+		</article>
+
+		<!-- the NEWS -->
+		<article class="article clearfix">
+			<div class="container">
+				<a name="theLab" ></a>
+				
+				<!-- the EXPLANATION -->
+				<div class="col_33">
+					<h2 class="center thin">Different Cities</h2>
+					<p>We gather data from several cities</p>
+					<ul class="thin breakingNews left" style="margin-top:0">
+						<li><strong>Paris</strong> (fr) - 8 sources</li>
+						<li><strong>Shanghai</strong> (cn) - 9 sources</li>
+						<li>Beijing (cn)</li>
+						<li>Tokyo (jp)</li>
+						<li>New York (us)</li>
+						<li>London (uk)</li>
+						<li>More to come</li>
+					</ul>
+					but have a strong focus on Paris (fr) and Shanghai (cn)</p>
+				</div>
+				
+				<!-- the WHAT -->
+				<div class="col_33 left">
+					<h2 class="center thin">Everything Geolocalized</h2>
+					<p>We gather everything that mention a location, whether as a GPS coordinate couple, city name, address or textual location from any dataset, website, API that we found.</p>
+					<p>Everything is stored in many ways depending on the use of the data to maximise usability and efficiency at the same time. </p>
+				</div>
+
+				<!-- the NEWS -->
+				<div class="col_33">
+					<h2 class="center thin">Data usage</h2>
+					<p>We do not share dataset online but we share how we got it. Check our <a href="http://www.github.com/complexcity/capture" target="_blank">repository on github</a> to learn more about it.</p>
+					<p>If you wish to use some of our data or make a study with us, do not hesitate to contact us, we love hearing and developing new ideas.</p>
+				</div>
+			</div>
+		</article>
+	</div>
+	
+	<!-- the MAIN CONTENT -->
+	<article class="article clearfix">
+		<div class="blog-container">
+			<h1 class="col_100 thin center"> Our Datasets </h1>
+			{% for item in site.data.data %}
+			<h2 style="clear:both;padding:0em;margin:0em">{{ item.title }}</h2>
+			<p style="clear:both;padding:0em;margin:0em">{{ item.description }}</p>
+			<ul clas="thin" style="list-style-type:none;padding-bottom:0em;margin:0em">
+				<li style="clear:both;padding-top:0em;padding-bottom:0em;margin-top:0"><strong>type:</strong>&nbsp;{{ item.type }}</li>
+				<li style="clear:both;padding-top:0em;padding-bottom:0em;margin-top:0"><strong>cities:</strong>&nbsp;{{ item.cities }}</li>
+				<li style="clear:both;padding-top:0em;padding-bottom:0em;margin-top:0"><strong>source:</strong>&nbsp;{{ item.source }}</li>
+				<li style="clear:both;padding-top:0em;padding-bottom:0em;margin-top:0"><strong>capture-type:</strong>&nbsp;{{ item.cities }}</li>
+				<li style="clear:both;padding-top:0em;padding-bottom:0em;margin-top:0"><strong>spatial-precision:</strong>&nbsp;{{ item.spatial-precision }}</li>
+				<li style="clear:both;padding-top:0em;padding-bottom:0em;margin-top:0"><strong>temporal-precision:</strong>&nbsp;{{ item.temporal-precision }}</li>
+				<li style="clear:both;padding-top:0em;padding-bottom:0em;margin-top:0"><strong>dataset-precision:</strong>&nbsp;{{ item.dataset-precision }}</li>
+				<li style="clear:both;padding-top:0em;padding-bottom:0em;margin-top:0"><strong>status:</strong>&nbsp;{{ item.status }}</li>
+				<li style="clear:both;padding-top:0em;padding-bottom:0em;margin-top:0"><strong>count:</strong>&nbsp;{{ item.count }}</li>
+			</ul>
+			<br />
+			{% endfor %}
+		</div>
+	</article>
+
+    
+{% include footer.html %}

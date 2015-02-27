@@ -1,53 +1,105 @@
 ---
 title: ComplexCity Lab - Studies
 Author: Fabien Pfaender
-Keywords: UTC, UTT, UTBM, SHU, ComplexCity, Laboratory, Comprehensive, Data Science, City, UTSEUS
-Description:
+Keywords: Studies, Social Science, Humanities, Visualization, Data Science, Geography
+Description: 
 ---
 {% include header.html %}
+	<div class="invert-header-color" style="margin:0; width:100%;">
 	<header class="header clearfix container">
       <!-- the LOGO -->
       <div class="logo">
-      	<a href="/" alt="Complexcity Lab home" title="go home">
-      		<img src="{{ site.url }}/images/logo-ComplexCity.svg" onerror="this.onerror=null; this.src='{{ site.url }}/images//logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
+      	<a href="{{ site.url }}" alt="Complexcity Lab home" title="go home">
+      		<img src="{{ site.url }}/images/logo-ComplexCity-white.svg" onerror="this.onerror=null; this.src='images/logo-ComplexCity.png'" class="img-logo" alt="ComplexCity is a Sino-French joint lab program" ></a>
 	    	</a>
 	  	</div>
-	  
 
-	  	<!-- the SOCIAL links -->
+ 	  	<!-- the SOCIAL links -->
 	  	<div id="social">
-	  			<a href="https://github.com/ComplexCity/" title="our github repository" target="_blank">
-						<img src="{{ site.url }}/images/follow-us-github.png" onmouseover="this.src='{{ site.url }}/images/follow-us-github-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-github.png'" /></a>
-					<a href="https://speakerdeck.com/complexcity" title="our presentations on speakerdeck" target="_blank">
-						<img src="{{ site.url }}/images/follow-us-speakerdeck.png" onmouseover="this.src='{{ site.url }}/images/follow-us-speakerdeck-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-speakerdeck.png'" /></a>
-					<a href="http://twitter.com/complexcity_lab" title="our twitter account" target="_blank">
-						<img src="{{ site.url }}/images/follow-us-twitter.png" onmouseover="this.src='{{ site.url }}/images/follow-us-twitter-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-twitter.png'"/></a>
-					<a href="http://www.weibo.com/complexcity" title="our weibo account" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-weibo.png" onmouseover="this.src='{{ site.url }}/images/follow-us-weibo-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-weibo.png'"/></a>
-					<a href="/blog/feed.xml" title="ComplexCity Lab's Blog RSS feed" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-syndication.png" onmouseover="this.src='{{ site.url }}/images/follow-us-syndication-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-syndication.png'"/></a>
-					<a href="https://pinboard.in/u:shangdaemon/public/" title="our web links" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-pinboard.png" onmouseover="this.src='{{ site.url }}/images/follow-us-pinboard-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-pinboard.png'"/></a>
-					<a href="https://www.goodreads.com/review/list/32004943?shelf=read" title="the books we like" target=_blank>
-						<img src="{{ site.url }}/images/follow-us-goodreads.png" onmouseover="this.src='{{ site.url }}/images/follow-us-goodreads-hover.png'" onmouseout="this.src='{{ site.url }}/images/follow-us-goodreads.png'"/></a>
+			{% for item in site.data.social %}
+	  	  		<a href="{{ item.link }}" title="{{ item.title }}" target="_blank">
+				<img src="{{ site.url }}/{{ item.image-white }}" 
+					onmouseover="this.src='{{ site.url }}/{{ item.image-white-hover }}'" 
+					onmouseout="this.src='{{ site.url }}/{{ item.image-white }}'" /></a>
+			{% endfor %}
+		</div>
+      
+		<!--the MENU -->
+		<nav class="menu_main">
+			<ul>
+	        	<li><a href="/about/">ABOUT</a></li>
+				<li><a href="/projects/">PROJECTS</a></li>
+				<li class="active"><a href="/studies/">STUDIES</a></li>
+				<li><a href="/blog/">BLOG</a></li>
+			</ul>
+		</nav>
+	</header>
+	</div>
+
+    <a name="about"></a>
+    <div class="grey" style="border-bottom:1px solid #ccc;border-top:1px solid #ccc;">
+		<!-- the 3 BOXES -->
+		<article class="article clearfix">
+			<div class="container">
+				<a name="about"></a>
+				<!-- the TAGS -->
+				<div class="col_33">
+					<h2 class="center thin">Homemade Tools</h2>
+					<ul class="breakingNews left">
+						<li><strong>JSon Explorer</strong> is a visual summary for your large json files</li>
+						<li>More to come soon</li>
+					</ul>	 
+				</div>
+
+				<!-- the TOOLS -->
+				<div class="col_33 left">
+					<h2 class="center thin">Tools</h2>
+					<p></p>
+					<ul class="breakingNews left">
+						<li><strong><a href="http://www.cartodb.com" target="_blank">CartoDB</a></strong> is an online geovisualization service to tell your stories with maps and ease</li>
+						<li><strong><a href="http://www.gephi.org" target="_blank">Gephi</a></strong> is a complex network visual exploration software</li>
+						<li><strong><a href="http://www.processing.org" target="_blank">Processing</a></strong> is a java-friendly fast-prototyping interactive visualisation designer</li>
+						<li><strong><a href="http://raw.densitydesign.org/">Raw</a></strong> create your visualization from spreadsheet in minutes </li>
+						<li>we also use tools from <a href="https://wiki.digitalmethods.net/Dmi/ToolDatabase" target="_blank">Digital Methods</a>, <a href="http://tools.medialab.sciences-po.fr/" target="_blank">médialab (Sciences-Po)</a>, <a href="http://www.bestiario.org/" target="_blank">bestario</a> or <a href="https://open.xerox.com/" target="_blank">Open Xerox</a></li>
+					</ul>	 
+				</div>
+
+				<!-- the LIBRARIES -->
+				<div class="col_33">  
+					<h2 class="center thin">Libraries</h2>
+					<p></p>
+					<ul class="breakingNews left">
+						<li><strong><a href="http://docs.python-requests.org/en/latest/" target="_blank">Requests</a></strong> is a python library to query API and download HTML pages</li>
+						<li><strong><a href="http://lxml.de/" target="_blank">lxml</a></strong> is a python library to mount and query HTML and XMl pages</li>
+						<li><strong><a href="http://d3js.org/" target="_blank">d3.js</a></strong> is a reference library to create online interactive visualization</li>
+						<li><strong><a href="http://www.mapbox.com" target="_blank">Mapbox</a> & <a href="http://leafletjs.com/" target="_blank">Leaflet</a></strong> to create interactive beautiful online maps</li>
+						<li>we also use libraries like <a href="http://sigmajs.org/" target="_blank">sigma.js</a>, <a href="http://unfoldingmaps.org/" target="_blank">unfolding</a>, <a href="http://polymaps.org/" target="_blank">polymaps</a> or <a href="http://stamen.com/" target="_blank">stamen</a>
+					</ul>	
+				</div>
 			</div>
-      
-      <!--the MENU -->
-      <nav class="menu_main">
-        <ul>
-					<li><a href="/about/">ABOUT</a></li>
-					<li><a href="/projects/">PROJECTS</a></li>
-					<li class="active">STUDIES</li>
-					<li><a href="/blog/">BLOG</a></li>
-        </ul>
-      </nav>
-      
-      <!-- credit work in the top corner, image in css -->
-    </header>
+		</article>
+	</div>
 	<!-- the MAIN CONTENT -->
 	<article class="article clearfix" style="padding-top:0em;">
-		<h1 class="thin center"></h1>
-		<div class="container">
-
+		<h1 class="thin center">AWESOME CASE STUDIES</h1>
+		<div class="container studies-and-projects-box">
+			<div class="studies-and-projects-item">
+				<a href="2014-05-26-weibo-spatial-and-temporal-data.html">
+					<img src="{{ site.url }}/images/studies/2014-05-26-weibo-spatial-and-temporal-data-square.png" class="caption" alt="Shanghai map" data-caption="Weibo Spatial and temporal Data [Short]"/></a>
+			</div>
+			<div class="studies-and-projects-item">
+					<img src="{{ site.url }}/images/studies/soon.svg" class="caption" alt="Shanghai map" data-caption="More Studies Soon"/>
+			</div>
 		</div>
 	</article>
+	<script type="text/javascript">$(window).load(function() {
+    $('img.caption').captionjs({
+	    'class_name'      : 'captionjs',
+        'schema'          : true,        // Use schema.org markup (i.e., itemtype, itemprop)
+        'mode'            : 'animated',   // default | static | animated | hide
+        'debug_mode'      : false,       // Output debug info to the JS console
+        'force_dimensions': false        // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
+	    
+    });
+});</script>
+{% include footer.html %}

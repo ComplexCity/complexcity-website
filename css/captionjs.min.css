@@ -1,0 +1,57 @@
+.captionjs{
+	line-height:0
+}
+
+.captionjs figcaption{
+	line-height:1;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+	width:100%;
+	background: rgba(0,0,0,0.5);
+	font-size:24px;
+	color: white;
+	font-weight: 300;
+	padding: 1em ;
+}
+
+.captionjs.stacked, .captionjs.animated, .captionjs.hide{
+	position:relative;overflow:hidden
+}
+
+.captionjs.stacked figcaption, .captionjs.animated figcaption, .captionjs.hide figcaption{
+	position:absolute
+}
+
+.captionjs.stacked figcaption{
+	bottom:0
+}
+
+.captionjs.animated figcaption{
+	-webkit-transition:.25s bottom;
+	-moz-transition:.25s bottom;
+	-ms-transition:.25s bottom;
+	-o-transition:.25s bottom;
+	transition:.25s bottom
+}
+
+.captionjs.animated:hover figcaption{
+	bottom:0px !important
+}
+
+.captionjs.hide figcaption{
+	-webkit-transition:.25s margin-bottom;
+	-moz-transition:.25s margin-bottom;
+	-ms-transition:.25s margin-bottom;
+	-o-transition:.25s margin-bottom;
+	transition:.25s margin-bottom
+}
+	
+.captionjs.hide:hover figcaption{
+	margin-bottom:0 !important
+}
+
+
+02月28&#26085;

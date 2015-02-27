@@ -5,6 +5,7 @@ author: Laetitia
 image_big: /assets/weibo-spatial-and-temporal-data/big.png
 image_small: /assets/weibo-spatial-and-temporal-data/square.png
 image_alt: Weibo data over the map of Shanghai
+image_credit: ""
 code_content: true
 comments: true
 keywords:
@@ -12,11 +13,11 @@ description:
 categories:
 ---
 
-The following post goes along with the article [Weibo spatial and temporal data](/studies/). The visualization was built on two JavaScript libraries: [D3.js](http://d3js.org) for the bar chart and [Mapbox.js](http://mapbox.com) for the map. The purpose of this tutorial is to explain the technical side and hence give a practical example around these two libraries. It assumes you know a little about web development though: how to edit a web page and view it in your browser, how to include JavaScript on the page and the like.
+The following post goes along with the article [Weibo spatial and temporal data](/studies/2014-05-26-weibo-spatial-and-temporal-data.html). The visualization was built on two JavaScript libraries: [D3.js](http://d3js.org) for the bar chart and [Mapbox.js](http://mapbox.com) for the map. The purpose of this tutorial is to explain the technical side and hence give a practical example around these two libraries. It assumes you know a little about web development though: how to edit a web page and view it in your browser, how to include JavaScript on the page and the like.
 
 ##The data
 
-For the [Digital Eternity Project](/projects/), we queried the Weibo API with a Python script using a tessellation of Shanghai made with 4 km diameter cells centered on 85 locations. Thus, we collected about 245,000 messages created between April 1 and April 9. These messages were stored into a SQLite database. Then, another Python script was in charge of counting the messages. The result is a JavaScript dictionary (or associative array) associating the number of messages at the 24 hours of the day to each of the 85 GPS coordinates:
+For the [Digital Eternities Project](/projects/digital-eternities.html), we queried the Weibo API with a Python script using a tessellation of Shanghai made with 4 km diameter cells centered on 85 locations. Thus, we collected about 245,000 messages created between April 1 and April 9. These messages were stored into a SQLite database. Then, another Python script was in charge of counting the messages. The result is a JavaScript dictionary (or associative array) associating the number of messages at the 24 hours of the day to each of the 85 GPS coordinates:
 
 {% highlight javascript %}
 var weibo = {
@@ -497,4 +498,4 @@ And we modify the handlers of the *mouseover* and *mouseout* events in the bar c
   });
 {% endhighlight %}
 
-And we're done! Check the full code on [GitHub](https://github.com/ComplexCity/weibo-qingmingjie) and the working example in the article [Weibo spatial and temporal data](/studies/).
+And we're done! Check the full code on [GitHub](https://github.com/ComplexCity/weibo-qingmingjie) and the working example in the article [Weibo spatial and temporal data](/studies/2014-05-26-weibo-spatial-and-temporal-data.html).

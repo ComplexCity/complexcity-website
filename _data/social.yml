@@ -1,0 +1,49 @@
+- link: "https://github.com/ComplexCity/"
+  title: our github repository
+  image: images/follow-us/follow-us-github.png
+  image-hover: images/follow-us/follow-us-github-hover.png
+  image-white: images/follow-us/follow-us-github-white.png
+  image-white-hover: images/follow-us/follow-us-github-hover.png
+
+- link: "https://speakerdeck.com/complexcity"
+  title: our presentations on speakerdeck
+  image: images/follow-us/follow-us-speakerdeck.png
+  image-hover: images/follow-us/follow-us-speakerdeck-hover.png
+  image-white: images/follow-us/follow-us-speakerdeck-white.png
+  image-white-hover: images/follow-us/follow-us-speakerdeck-hover.png
+
+- link: "http://twitter.com/complexcity_lab"
+  title: our twitter account
+  image: images/follow-us/follow-us-twitter.png
+  image-hover: images/follow-us/follow-us-twitter-hover.png
+  image-white: images/follow-us/follow-us-twitter-white.png
+  image-white-hover: images/follow-us/follow-us-twitter-hover.png
+  
+- link: "http://www.weibo.com/complexcity"
+  title: our weibo account
+  image: images/follow-us/follow-us-weibo.png
+  image-hover: images/follow-us/follow-us-weibo-hover.png
+  image-white: images/follow-us/follow-us-weibo-white.png
+  image-white-hover: images/follow-us/follow-us-weibo-hover.png
+
+- link: "http://complexcity.org/blog/feed.xml"
+  title: "ComplexCity Lab's Blog RSS feed"
+  image: images/follow-us/follow-us-syndication.png
+  image-hover: images/follow-us/follow-us-syndication-hover.png
+  image-white: images/follow-us/follow-us-syndication-white.png
+  image-white-hover: images/follow-us/follow-us-syndication-hover.png
+  
+- link: "https://pinboard.in/u:shangdaemon/public/"
+  title: our web links on pinboard
+  image: images/follow-us/follow-us-pinboard.png
+  image-hover: images/follow-us/follow-us-pinboard-hover.png
+  image-white: images/follow-us/follow-us-pinboard-white.png
+  image-white-hover: images/follow-us/follow-us-pinboard-hover.png
+
+- link: "https://www.goodreads.com/review/list/32004943?shelf=read"
+  title: the books we like
+  image: images/follow-us/follow-us-goodreads.png
+  image-hover: images/follow-us/follow-us-goodreads-hover.png
+  image-white: images/follow-us/follow-us-goodreads-white.png
+  image-white-hover: images/follow-us/follow-us-goodreads-hover.png
+  
